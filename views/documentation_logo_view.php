@@ -35,7 +35,7 @@
 				>
 				
 						<img
-							src="/tavernraid/images/logo/TavernRaidLogo_TransparentBackground.png" 
+							src="/images/logo/Logo_TransparentBackground.png" 
 							style="height:1000px;"
 						/>
 					</div>

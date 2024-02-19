@@ -10,8 +10,8 @@
 		public function displayMobile() {
 			header('Content-Type: application/json');
 		
-			if (!empty(TavernRaidRequestResponseHelper::$response['errors'])) {
-				foreach (TavernRaidRequestResponseHelper::$response['errors'] as $error_message) {
+			if (!empty(RequestResponseHelper::$response['errors'])) {
+				foreach (RequestResponseHelper::$response['errors'] as $error_message) {
 					UserMessagesHelper::addToMessages(
 						$error_message,
 						UserMessagesHelper::MESSAGE_LEVEL_ERROR
@@ -28,7 +28,7 @@
 		 * ********************************************************
 		 * ********************************************************/
 		public function displayWeb(
-			TavernRaidAbstractDo $image_do,
+			AbstractDo $image_do,
 			DoFactory $do_factory
 		) {
 			?>

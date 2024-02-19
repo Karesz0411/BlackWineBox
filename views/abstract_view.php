@@ -30,7 +30,7 @@
 				
 				<div id="menu">
 					<?php
-						require(TavernRaidRequestResponseHelper::$root . '/views/abstract_menu_view.php');
+						require(RequestResponseHelper::$root . '/views/abstract_menu_view.php');
 					?>
 					<h1>
 						<?php
