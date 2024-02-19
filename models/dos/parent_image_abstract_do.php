@@ -2,8 +2,7 @@
 	/* ********************************************************
 	 * ********************************************************
 	 * ********************************************************/
-	class TavernItemRewardDo extends TavernRaidAbstractDo {
-		public $tavern_id;
-		public $item_name;
+	class ParentImageAbstractDo extends ImageAbstractDo {
+		public $parent_class_actor;
 	}
 ?>

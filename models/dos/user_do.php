@@ -24,9 +24,6 @@
 		public $cover_image_large;
 		public $cover_image_original_png;
 		
-		public $user_achievements_dos = [];
-		public $user_raid_moment_dos = [];
-		
 		function __construct($attributes = null, $class_actor = null) {
 			$this->class_actor = $class_actor;
 			$this->parent_class_actor = DoFactory::ITEM;
@@ -61,13 +58,13 @@
 				
 				if (
 					file_exists(
-						TavernRaidRequestResponseHelper::$root . 
+						RequestResponseHelper::$root . 
 						'/cdn/' . 
 						$image_file_name
 					)
 				) {
 					$this->$attribute_name =
-						TavernRaidRequestResponseHelper::$url_root . 
+						RequestResponseHelper::$url_root . 
 						'/cdn/' .
 						$image_file_name
 					;
@@ -105,20 +102,20 @@
 				
 				if (
 					file_exists(
-						TavernRaidRequestResponseHelper::$root . 
+						RequestResponseHelper::$root . 
 						'/cdn/' . 
 						$image_file_name
 					)
 				) {
 					$this->$attribute_name =
-						TavernRaidRequestResponseHelper::$url_root . 
+						RequestResponseHelper::$url_root . 
 						'/cdn/' .
 						$image_file_name
 					;
 				}
 				else {
 					$this->$attribute_name =
-						TavernRaidRequestResponseHelper::$url_root .
+						RequestResponseHelper::$url_root .
 						'/cdn/' .
 						'logo_3_' .
 						$image_size .

@@ -2,7 +2,7 @@
 	/* ********************************************************
 	 * ********************************************************
 	 * ********************************************************/
-	class ImageDo extends TavernRaidAbstractDo {
+	class ImageDo extends AbstractDo {
 		public $actor;
 		public $id;
 	}

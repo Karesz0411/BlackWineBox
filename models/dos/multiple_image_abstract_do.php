@@ -2,8 +2,6 @@
 	/* ********************************************************
 	 * ********************************************************
 	 * ********************************************************/
-	class RaidUserDo extends TavernRaidAbstractDo {
-		public $user_id;
-		public $raid_id;
+	class MultipleImageAbstractDo extends ImageAbstractDo {
 	}
 ?>

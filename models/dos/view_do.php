@@ -1,13 +1,13 @@
 <?php
 	
 	class ViewDo {
-		public $root_title = 'TavernRaid';
+		public $root_title = 'BlackWineBox';
 		public $root_link;
 		public $titles;
 		public $links;
 		
 		function __construct(array $titles, array $links) {
-			$this->root_link = TavernRaidRequestResponseHelper::$url_root;
+			$this->root_link = RequestResponseHelper::$url_root;
 			$this->links = $links;
 			$this->titles = $titles;
 		}

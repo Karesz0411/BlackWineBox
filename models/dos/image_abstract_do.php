@@ -2,28 +2,22 @@
 	/* ********************************************************
 	 * ********************************************************
 	 * ********************************************************/
-	class TavernItemsDo extends TavernRaidImageAbstractDo {
-		public $tavern_id;
-		public $item_id;
-		public $price;
+	abstract class ImageAbstractDo extends AbstractDo {
 		
-		public $item_name;
-		public $item_is_alcoholic;
-		
-		public $parent_id;
-		public $parent_class_actor;
-		
+		public $image_icon;
+		public $image_small;
+		public $image_medium;
+		public $image_large;
+		public $image_original_png;
+	
 		function __construct($attributes = null, $class_actor = null) {
 			$this->class_actor = $class_actor;
-			$this->parent_class_actor = DoFactory::ITEM;
 			
 			if ($attributes != null) {
 				foreach ($attributes as $key => $value) {
 					$this->$key = $value;
 				}
 			}
-			
-			$this->parent_id = $this->item_id;
 			
 			foreach(
 				[
@@ -35,9 +29,9 @@
 				] as $image_size
 			) {
 				$image_file_name =
-					strtolower($this->parent_class_actor) .
+					strtolower($this->class_actor) .
 					'_' .
-					$this->parent_id .
+					$this->id .
 					'_' .
 					$image_size .
 					'.png'
@@ -47,22 +41,22 @@
 				
 				if (
 					file_exists(
-						TavernRaidRequestResponseHelper::$root . 
+						RequestResponseHelper::$root . 
 						'/cdn/' . 
 						$image_file_name
 					)
 				) {
 					$this->$attribute_name =
-						TavernRaidRequestResponseHelper::$url_root . 
+						RequestResponseHelper::$url_root . 
 						'/cdn/' .
 						$image_file_name
 					;
 				}
 				else {
 					$this->$attribute_name =
-						TavernRaidRequestResponseHelper::$url_root .
+						RequestResponseHelper::$url_root .
 						'/cdn/' .
-						'logo_1_' .
+						'logo_3_' .
 						$image_size .
 						'.png'
 					;

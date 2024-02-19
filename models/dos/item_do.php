@@ -2,9 +2,8 @@
 	/* ********************************************************
 	 * ********************************************************
 	 * ********************************************************/
-	class ItemDo extends TavernRaidAbstractDo {
+	class ItemDo extends AbstractDo {
 		public $name;
-		public $is_alcoholic;
 		public $image_file_name;
 	}
 ?>

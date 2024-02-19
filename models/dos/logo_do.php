@@ -1,5 +1,5 @@
 <?php
-	class LogoDo extends TavernRaidAbstractDo {
+	class LogoDo extends AbstractDo {
 		
 	}
 ?>
