@@ -8,9 +8,10 @@
 	
 	require(dirname(__FILE__) . '/models/helpers/request_response_helper.php');
 	
-	RequestResponseHelper::$root     = dirname(__FILE__);
-	RequestResponseHelper::$path     = $_GET['path'];
-	RequestResponseHelper::$url_root = "https://localhost/BlackWineBox";
+	RequestResponseHelper::$root         = dirname(__FILE__);
+	RequestResponseHelper::$path         = $_GET['path'];
+	RequestResponseHelper::$url_root     = "https://localhost/BlackWineBox";
+	RequestResponseHelper::$html_title   = "BlackWineBox";
 	
 	require(RequestResponseHelper::$root . '/models/helpers/log_helper.php');
 	require(RequestResponseHelper::$root . '/models/helpers/user_messages_helper.php');

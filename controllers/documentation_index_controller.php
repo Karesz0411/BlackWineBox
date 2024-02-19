@@ -3,20 +3,20 @@
 	
 	$view_do = new ViewDo(
 		[
-			ucfirst(TavernRaidRequestResponseHelper::$actor_name) . " " . 
-			ucfirst(TavernRaidRequestResponseHelper::$actor_action)
+			ucfirst(RequestResponseHelper::$actor_name) . " " . 
+			ucfirst(RequestResponseHelper::$actor_action)
 		],
 		[
-			TavernRaidRequestResponseHelper::$url_root . "/" . 
-			TavernRaidRequestResponseHelper::$method . "/" . 
-			TavernRaidRequestResponseHelper::$actor_name . "/" . 
-			TavernRaidRequestResponseHelper::$actor_action
+			RequestResponseHelper::$url_root . "/" . 
+			RequestResponseHelper::$method . "/" . 
+			RequestResponseHelper::$actor_name . "/" . 
+			RequestResponseHelper::$actor_action
 		]
 	);
 	
 	$documentation_index_view = new DocumentationIndexView($view_do);
 	
-	if (TavernRaidRequestResponseHelper::$method == 'mobile') {
+	if (RequestResponseHelper::$method == 'mobile') {
 		$documentation_index_view->displayMobile();
 	}
 	else {

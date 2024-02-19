@@ -49,7 +49,7 @@
             $this->do = $do;
 			
 			//Set the target directory
-			$this->target_directory = TavernRaidRequestResponseHelper::$root . '/cdn/';
+			$this->target_directory = RequestResponseHelper::$root . '/cdn/';
 
             //Get the uploaded files extension
             $this->file_extension = strtolower(pathinfo(

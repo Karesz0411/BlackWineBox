@@ -16,7 +16,7 @@
 		/* ********************************************************
 		 * ********************************************************
 		 * ********************************************************/
-		public function isValid(TavernRaidAbstractDo $do) {
+		public function isValid(AbstractDo $do) {
 			if ($do->id < 1) {
 				return false;
 			}

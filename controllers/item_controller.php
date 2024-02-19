@@ -6,21 +6,21 @@
 	/* ********************************************************
 	* *** Lets control exectution by actor action... *********
 	* ********************************************************/
-	switch (TavernRaidRequestResponseHelper::$actor_action) {
+	switch (RequestResponseHelper::$actor_action) {
 		case '':
-			TavernRaidRequestResponseHelper::addToResponse('available_actor_actions', [
-				TavernRaidRequestResponseHelper::$url_root . '/' . TavernRaidRequestResponseHelper::$actor_name . '/create'
+			RequestResponseHelper::addToResponse('available_actor_actions', [
+				RequestResponseHelper::$url_root . '/' . RequestResponseHelper::$actor_name . '/create'
 			]);
 			break;
 		default:
 			require(
-				TavernRaidRequestResponseHelper::$root . '/controllers/' .
-				TavernRaidRequestResponseHelper::$actor_name . '_' . 
-				TavernRaidRequestResponseHelper::$actor_action . '_controller.php'
+				RequestResponseHelper::$root . '/controllers/' .
+				RequestResponseHelper::$actor_name . '_' . 
+				RequestResponseHelper::$actor_action . '_controller.php'
 			);
 	}
 
 	foreach(LogHelper::get() as $log_message) {
-		TavernRaidRequestResponseHelper::addToResponse('log', $log_message);
+		RequestResponseHelper::addToResponse('log', $log_message);
 	}
 ?>

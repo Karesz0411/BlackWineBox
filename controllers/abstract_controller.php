@@ -11,7 +11,7 @@
 	/**
 	 * Mobile version view
 	 */
-	if (TavernRaidRequestResponseHelper::$method == 'mobile') {
+	if (RequestResponseHelper::$method == 'mobile') {
 		header('Content-Type: application/json');
 		
 		echo json_encode( //TODO: Mit kellene küldeni a mobilosnak? [trisssz]
@@ -30,7 +30,7 @@
 	<head>
 		<meta charset="UTF-8">
 		
-		<title>Tavern Raid > AbstractTitle</title>
+		<title><?php echo(RequestResponseHelper::$html_title);?> > AbstractTitle</title>
 
 		<meta http-equiv="Cache-Control" content="no-store" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,7 +44,7 @@
 	<body id="main">
 	<div id="container">
 		
-		<h1>Tavern Raid > AbstractTitle</h1>
+		<h1><?php echo(RequestResponseHelper::$html_title);?> > AbstractTitle</h1>
 		
 		<form action="" method="post">
 			<label for="nick_name">Felhasználónév</label>

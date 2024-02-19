@@ -3,9 +3,9 @@
 	if (empty($_COOKIE['uid'])){
 		header(
 			"Location: " . 	
-			TavernRaidRequestResponseHelper::$url_root . "/" . 
-			TavernRaidRequestResponseHelper::$method . "/" . 
-			TavernRaidRequestResponseHelper::$actor_name . "/" . 
+			RequestResponseHelper::$url_root . "/" . 
+			RequestResponseHelper::$method . "/" . 
+			RequestResponseHelper::$actor_name . "/" . 
 			"login"
 		);
 		exit();		
@@ -15,20 +15,20 @@
 	
 	$view_do = new ViewDo(
 		[
-			ucfirst(TavernRaidRequestResponseHelper::$actor_name) . " " . 
-			ucfirst(TavernRaidRequestResponseHelper::$actor_action)
+			ucfirst(RequestResponseHelper::$actor_name) . " " . 
+			ucfirst(RequestResponseHelper::$actor_action)
 		],
 		[
-			TavernRaidRequestResponseHelper::$url_root . "/" . 
-			TavernRaidRequestResponseHelper::$method . "/" . 
-			TavernRaidRequestResponseHelper::$actor_name . "/" . 
-			TavernRaidRequestResponseHelper::$actor_action
+			RequestResponseHelper::$url_root . "/" . 
+			RequestResponseHelper::$method . "/" . 
+			RequestResponseHelper::$actor_name . "/" . 
+			RequestResponseHelper::$actor_action
 		]
 	);
 	
 	$user_profile_view = new UserProfileView($view_do);
 	
-	if (TavernRaidRequestResponseHelper::$method == 'mobile') {
+	if (RequestResponseHelper::$method == 'mobile') {
 		$user_profile_view->displayMobile($do);
 	}
 	else {

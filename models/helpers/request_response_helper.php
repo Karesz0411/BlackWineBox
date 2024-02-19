@@ -12,6 +12,7 @@
 		public static $actor_name   = "";
 		public static $actor_action = "";
 		public static $response     = [];
+		public static $html_title   = "";
 
 		/* ********************************************************
 		** ********************************************************

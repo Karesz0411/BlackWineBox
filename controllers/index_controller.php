@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Tavern Raid</title>
+	<title><?php echo(RequestResponseHelper::$html_title);?></title>
 
 	<meta http-equiv="Cache-Control" content="no-store" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,9 +16,9 @@
 <body id="main">
 <div id="container">
 	
-	<h1>Tavern Raid</h1>
+	<h1><?php echo(RequestResponseHelper::$html_title);?></h1>
 	<?php
-		require(TavernRaidRequestResponseHelper::$root . '/views/abstract_menu_view.php');
+		require(RequestResponseHelper::$root . '/views/abstract_menu_view.php');
 	?>
 	<br style="clear:both;" />
 	<hr/>

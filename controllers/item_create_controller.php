@@ -3,22 +3,21 @@
 	
 	$view_do = new ViewDo(
 		[
-			ucfirst(TavernRaidRequestResponseHelper::$actor_name) . " " . 
-			ucfirst(TavernRaidRequestResponseHelper::$actor_action)
+			ucfirst(RequestResponseHelper::$actor_name) . " " . 
+			ucfirst(RequestResponseHelper::$actor_action)
 		],
 		[
-			TavernRaidRequestResponseHelper::$url_root . "/" . 
-			TavernRaidRequestResponseHelper::$method . "/" . 
-			TavernRaidRequestResponseHelper::$actor_name . "/" . 
-			TavernRaidRequestResponseHelper::$actor_action
+			RequestResponseHelper::$url_root . "/" . 
+			RequestResponseHelper::$method . "/" . 
+			RequestResponseHelper::$actor_name . "/" . 
+			RequestResponseHelper::$actor_action
 		]
 	);
 	
 	$item_create_view = new ItemCreateView($view_do);
 
 	$page_form_attributes = [
-		'name',
-		'is_alcoholic'
+		'name'
 	];
 	foreach($page_form_attributes as $key => $value) {
 		$do->$value = isset($_POST[$value]) ? $_POST[$value] : null;
@@ -60,7 +59,7 @@
 		}
 	}
 	
-	if (TavernRaidRequestResponseHelper::$method == 'mobile') {	
+	if (RequestResponseHelper::$method == 'mobile') {	
 		$item_create_view->displayMobile();
 	}
 	else {
