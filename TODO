@@ -12,4 +12,4 @@ CTO:
 
 Engineering:
 
-    - Make skeleton: abstract backend -> must delete all instances of previous project class names
+    - Make skeleton: abstract backend -> must delete all instances of previous project class names and file names, classes etc.
