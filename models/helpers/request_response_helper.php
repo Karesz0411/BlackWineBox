@@ -2,7 +2,7 @@
 	/* ********************************************************
 	** ********************************************************
 	** ********************************************************/
-	class TavernRaidRequestResponseHelper {
+	class RequestResponseHelper {
 		public static $root         = "";
 		public static $path         = "";
 		public static $url_root     = "";

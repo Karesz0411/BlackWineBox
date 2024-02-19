@@ -6,41 +6,41 @@
 	error_reporting(E_ALL & ~E_NOTICE);
 	ini_set('display_errors', 1);
 	
-	require(dirname(__FILE__) . '/models/helpers/black_wine_box_request_response_helper.php');
+	require(dirname(__FILE__) . '/models/helpers/request_response_helper.php');
 	
-	BlackWineBoxRequestResponseHelper::$root     = dirname(__FILE__);
-	BlackWineBoxRequestResponseHelper::$path     = $_GET['path'];
-	BlackWineBoxRequestResponseHelper::$url_root = "https://theapp.artidas.hu/black_wine_box";
+	RequestResponseHelper::$root     = dirname(__FILE__);
+	RequestResponseHelper::$path     = $_GET['path'];
+	RequestResponseHelper::$url_root = "https://localhost/BlackWineBox";
 	
-	require(BlackWineBoxRequestResponseHelper::$root . '/models/helpers/black_wine_box_log_helper.php');
-	require(BlackWineBoxRequestResponseHelper::$root . '/models/helpers/user_messages_helper.php');
-	require(BlackWineBoxRequestResponseHelper::$root . '/models/dos/black_wine_box_abstract_do.php');
+	require(RequestResponseHelper::$root . '/models/helpers/log_helper.php');
+	require(RequestResponseHelper::$root . '/models/helpers/user_messages_helper.php');
+	require(RequestResponseHelper::$root . '/models/dos/abstract_do.php');
 	
-	require(BlackWineBoxRequestResponseHelper::$root . '/models/dos/black_wine_box_image_abstract_do.php');
-	require(BlackWineBoxRequestResponseHelper::$root . '/models/dos/black_wine_box_parent_image_abstract_do.php');
-	require(BlackWineBoxRequestResponseHelper::$root . '/models/dos/black_wine_box_multiple_image_abstract_do.php');
-	require(BlackWineBoxRequestResponseHelper::$root . '/models/dos/user_do.php');
+	require(RequestResponseHelper::$root . '/models/dos/image_abstract_do.php');
+	require(RequestResponseHelper::$root . '/models/dos/parent_image_abstract_do.php');
+	require(RequestResponseHelper::$root . '/models/dos/multiple_image_abstract_do.php');
+	require(RequestResponseHelper::$root . '/models/dos/user_do.php');
 	
-	BlackWineBoxLogHelper::add('--------------------------------------------------------------------------------');
-	BlackWineBoxLogHelper::add(date('Y-m-d H:i:s', time()));
-	BlackWineBoxLogHelper::add('Starting up engines...');
+	LogHelper::add('--------------------------------------------------------------------------------');
+	LogHelper::add(date('Y-m-d H:i:s', time()));
+	LogHelper::add('Starting up engines...');
 
 	/* ********************************************************
 	 * *** Here is the main controlling logic... **************
 	 * ********************************************************/
-	BlackWineBoxRequestResponseHelper::$request = empty(explode('/', BlackWineBoxRequestResponseHelper::$path)[2]) ?
+	RequestResponseHelper::$request = empty(explode('/', RequestResponseHelper::$path)[2]) ?
 		[2 => 'index'] :
-		explode('/', BlackWineBoxRequestResponseHelper::$path)
+		explode('/', RequestResponseHelper::$path)
 	;
-	BlackWineBoxRequestResponseHelper::$project_name = BlackWineBoxRequestResponseHelper::$request[0];
-	BlackWineBoxRequestResponseHelper::$method       = BlackWineBoxRequestResponseHelper::$request[1];
-	BlackWineBoxRequestResponseHelper::$actor_name   = BlackWineBoxRequestResponseHelper::$request[2];
-	BlackWineBoxRequestResponseHelper::$actor_action = BlackWineBoxRequestResponseHelper::$request[3];
+	RequestResponseHelper::$project_name = RequestResponseHelper::$request[0];
+	RequestResponseHelper::$method       = RequestResponseHelper::$request[1];
+	RequestResponseHelper::$actor_name   = RequestResponseHelper::$request[2];
+	RequestResponseHelper::$actor_action = RequestResponseHelper::$request[3];
 
-	require(BlackWineBoxRequestResponseHelper::$root . '/require.php');
+	require(RequestResponseHelper::$root . '/require.php');
 
-	BlackWineBoxLogHelper::add('Request: ' . BlackWineBoxRequestResponseHelper::$path);
-	BlackWineBoxLogHelper::add(BlackWineBoxRequestResponseHelper::$root . '/controllers/' . BlackWineBoxRequestResponseHelper::$actor_name . '_controller.php');
+	LogHelper::add('Request: ' . RequestResponseHelper::$path);
+	LogHelper::add(RequestResponseHelper::$root . '/controllers/' . RequestResponseHelper::$actor_name . '_controller.php');
 
 	/* ********************************************************
 	 * *** User autohorization ********************************
@@ -55,7 +55,7 @@
 	$do_factory = new DoFactory();
 	$bo_factory = new BoFactory();
 	require(
-		BlackWineBoxRequestResponseHelper::$root . '/controllers/' . 
-		BlackWineBoxRequestResponseHelper::$actor_name . '_controller.php'
+		RequestResponseHelper::$root . '/controllers/' . 
+		RequestResponseHelper::$actor_name . '_controller.php'
 	);
 ?>

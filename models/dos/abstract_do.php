@@ -2,7 +2,7 @@
 	/* ********************************************************
 	 * ********************************************************
 	 * ********************************************************/
-	abstract class TavernRaidAbstractDo {
+	abstract class AbstractDo {
 		public $class_actor = null;
 		public $id;
 		public $is_active;
