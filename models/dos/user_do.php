@@ -2,7 +2,7 @@
 	/* ********************************************************
 	 * ********************************************************
 	 * ********************************************************/
-	class UserDo extends TavernRaidMultipleImageAbstractDo {
+	class UserDo extends MultipleImageAbstractDo {
 		public $nick_name;
 		public $email;
 		public $password;
@@ -71,7 +71,7 @@
 				}
 				else {
 					$this->$attribute_name =
-						TavernRaidRequestResponseHelper::$url_root .
+						RequestResponseHelper::$url_root .
 						'/cdn/' .
 						'logo_1_' .
 						$image_size .
