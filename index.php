@@ -9,6 +9,7 @@
 	require(dirname(__FILE__) . '/models/helpers/request_response_helper.php');
 	
 	RequestResponseHelper::$root         = dirname(__FILE__);
+	print_r($_GET);
 	RequestResponseHelper::$path         = $_GET['path'];
 	RequestResponseHelper::$url_root     = "https://localhost/BlackWineBox";
 	RequestResponseHelper::$html_title   = "BlackWineBox";
@@ -33,10 +34,9 @@
 		[2 => 'index'] :
 		explode('/', RequestResponseHelper::$path)
 	;
-	RequestResponseHelper::$project_name = RequestResponseHelper::$request[0];
-	RequestResponseHelper::$method       = RequestResponseHelper::$request[1];
-	RequestResponseHelper::$actor_name   = RequestResponseHelper::$request[2];
-	RequestResponseHelper::$actor_action = RequestResponseHelper::$request[3];
+
+	RequestResponseHelper::$actor_name   = RequestResponseHelper::$request[1];
+	RequestResponseHelper::$actor_action = RequestResponseHelper::$request[2];
 
 	require(RequestResponseHelper::$root . '/require.php');
 
