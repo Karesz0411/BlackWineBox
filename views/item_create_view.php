@@ -31,13 +31,6 @@
 							<?php  ?>
 						/>
 					<br />
-					<label for="is_alcoholic">Ital típusa</label>
-						<select name="is_alcoholic">
-							<option value="" selected="selected">Válassza ki az ital típusát</option>
-							<option value="1" <?php if ($item_do->is_alcoholic == 1) {echo ('selected');} ?>>Alkoholos</option>
-							<option value="0" <?php if ($item_do->is_alcoholic == 0) {echo ('selected');} ?>>Alkoholmentes</option>
-						</select>
-					<br />
 					<label for="image_file">Kép feltöltése</label>
 						<input
 							name="image_file"

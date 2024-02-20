@@ -194,35 +194,7 @@ class UserBo {
 	 * ********************************************************
 	 * ********************************************************/
 	public function getById($id) {
-		$user_do = $this->dao->getById([$id]);
-		
-		$records = (new AchievementDao(new MysqlDatabaseBo()))->getByUserId([$user_do->id]);
-		if (empty($records)) {
-			UserMessagesHelper::addToMessages(
-				"Nincs még regisztrált achievements!",
-				UserMessagesHelper::MESSAGE_LEVEL_ERROR
-			);
-		}
-		else {
-			foreach ($records as $record) {
-				$user_do->user_achievements_dos[] = (new DoFactory)->get(DoFactory::ACHIEVEMENT, $record);
-			}
-		}
-		
-		$records = (new RaidDao(new MysqlDatabaseBo()))->getUserRaidMomentListWithTavernData([$user_do->id]);
-		if (empty($records)) {
-			UserMessagesHelper::addToMessages(
-				'Nincs még user raid moment!',
-				UserMessagesHelper::MESSAGE_LEVEL_ERROR
-			);
-		}
-		else {
-			foreach ($records as $record) {
-				$user_do->user_raid_moment_dos[] = (new DoFactory)->get(DoFactory::USER_RAID_MOMENT, $record);
-			}
-		}
-		
-		return $user_do;
+		return $this->dao->getById([$id]);
 	}
 
 	/* ********************************************************
@@ -233,49 +205,6 @@ class UserBo {
 		//TODO: Agree on password retrieval/resetting method and finish this function...
 		//TODO: This is a terrible hack until I debud the REQUEST/GET/POST mixmatch issue from .htaccess redirects
 		return "Kérjük nézd meg az e-mail fiókod: {$parameters[1]}";
-	}
-	
-	/* ********************************************************
-	 * ********************************************************
-	 * ********************************************************/
-	public function getUserListForTavernRegistration() {
-		return $this->dao->getUserListForTavernRegistration();
-	}
-	
-	/* ********************************************************
-	 * ********************************************************
-	 * ********************************************************/
-	public function getUserOrders($user_id) {
-		return $this->dao->getUserOrders([$user_id]);
-	}
-	
-	/* ********************************************************
-	 * ********************************************************
-	 * ********************************************************/
-	public function registerAchievementForUser(
-		UserDo $user_do,
-		AchievementDo $achievement_do)
-	{
-		return $this->dao->registerAchievementForUser(
-			[
-				$user_do->id,
-				$achievement_do->id
-			]
-		);
-	}
-	
-	/* ********************************************************
-	 * ********************************************************
-	 * ********************************************************/
-	public function createRaidMomentForUser(UserRaidMomentDo $user_raid_moment_do)
-	{
-		return $this->dao->createRaidMomentForUser(
-			[
-				$user_raid_moment_do->user_id,
-				$user_raid_moment_do->raid_id,
-				$user_raid_moment_do->description
-			]
-		);
 	}
 	
 }

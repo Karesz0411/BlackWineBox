@@ -19,8 +19,7 @@
 			$query_string = "/* __CLASS__ __FUNCTION__ __FILE__ __LINE__ */
 				SELECT
 					MAIN.id AS id,
-					MAIN.name AS name,
-					MAIN.is_alcoholic AS is_alcoholic
+					MAIN.name AS name
 				FROM
 					items MAIN
 				WHERE
@@ -54,7 +53,6 @@
 					items
 				SET
 					name			 = ?,
-					is_alcoholic	 = ?,
 					is_active        = 1,
 					created_at       = NOW(),
 					updated_at       = NOW()
@@ -82,7 +80,7 @@
 				);
 			}
 			catch(Exception $exception) {
-				TavernRaidRequestResponseHelper::addToResponse('errors', $exception->getMessage());
+				RequestResponseHelper::addToResponse('errors', $exception->getMessage());
 				return false;
 			}
 		}
@@ -130,8 +128,7 @@
 			$query_string = "/* __CLASS__ __FUNCTION__ __FILE__ __LINE__ */
 				SELECT
 					MAIN.id           AS id,
-					MAIN.name         AS name,
-					MAIN.is_alcoholic AS is_alcoholic
+					MAIN.name         AS name
 				FROM
 					items MAIN
 				WHERE

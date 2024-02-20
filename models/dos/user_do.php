@@ -18,12 +18,6 @@
 		public $profile_image_large;
 		public $profile_image_original_png;
 		
-		public $cover_image_icon;
-		public $cover_image_small;
-		public $cover_image_medium;
-		public $cover_image_large;
-		public $cover_image_original_png;
-		
 		function __construct($attributes = null, $class_actor = null) {
 			$this->class_actor = $class_actor;
 			$this->parent_class_actor = DoFactory::ITEM;
@@ -74,50 +68,6 @@
 						RequestResponseHelper::$url_root .
 						'/cdn/' .
 						'logo_1_' .
-						$image_size .
-						'.png'
-					;
-				}
-			}
-			
-			foreach(
-				[
-					'icon',
-					'small',
-					'medium',
-					'large',
-					'original_png'
-				] as $image_size
-			) {
-				$image_file_name =
-					'usercoverimage' .
-					'_' .
-					$this->id .
-					'_' .
-					$image_size .
-					'.png'
-				;
-				
-				$attribute_name = 'cover_image_' . $image_size;
-				
-				if (
-					file_exists(
-						RequestResponseHelper::$root . 
-						'/cdn/' . 
-						$image_file_name
-					)
-				) {
-					$this->$attribute_name =
-						RequestResponseHelper::$url_root . 
-						'/cdn/' .
-						$image_file_name
-					;
-				}
-				else {
-					$this->$attribute_name =
-						RequestResponseHelper::$url_root .
-						'/cdn/' .
-						'logo_3_' .
 						$image_size .
 						'.png'
 					;

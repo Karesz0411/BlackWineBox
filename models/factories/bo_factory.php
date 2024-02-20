@@ -5,13 +5,8 @@
 	 * ********************************************************/
 	class BoFactory {
 		const USER 	       = "User";
-		const TAVERN       = "Tavern";
-		const TAVERN_ITEMS = "TavernItems";
-		const RAID 	       = "Raid";
-		const ACHIEVEMENT  = "Achievement";
 		const ITEM         = "Item";
 		const IMAGE        = "Image";
-		const ORDER        = "Order";
 		
 		/* ********************************************************
 		 * ********************************************************
