@@ -1,5 +1,7 @@
 <?php
-
+	/* ********************************************************
+	 * ********************************************************
+	 * ********************************************************/
 	class SecurityBo {
 		protected $dao;
 		
@@ -30,8 +32,9 @@
 			}
 			
 			if (
-				($this->dao->getUserPasswordHashByUserId([$_COOKIE['uid']]))->password_hash == 
-				$_COOKIE['uph']
+				isset($_COOKIE['uid']) &&
+				($this->dao->getUserPasswordHashByUserId([$_COOKIE['uid']]))
+					->password_hash == $_COOKIE['uph']
 			) {
 				UserMessagesHelper::addToMessages(
 					"User authorized.",

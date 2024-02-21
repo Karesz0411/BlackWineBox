@@ -33,7 +33,7 @@
 	 * *** Here is the main controlling logic... **************
 	 * ********************************************************/
 	RequestResponseHelper::$request = empty(explode('/', RequestResponseHelper::$path)[0]) ?
-		[0 => 'index'] :
+		[0 => 'index', 1 => 'index'] :
 		explode('/', RequestResponseHelper::$path)
 	;
 
