@@ -9,9 +9,11 @@
 	require(dirname(__FILE__) . '/models/helpers/request_response_helper.php');
 	
 	RequestResponseHelper::$root         = dirname(__FILE__);
-	print_r($_GET);
-	RequestResponseHelper::$path         = $_GET['path'];
-	RequestResponseHelper::$url_root     = "https://localhost/BlackWineBox";
+	// Get the requested URI
+	// Remove leading and trailing slashes and explode the URI by slashes
+	RequestResponseHelper::$path         = trim($_SERVER['REQUEST_URI'], '/');
+	//RequestResponseHelper::$url_root     = "https://blackwinebox.com";
+	RequestResponseHelper::$url_root     = "blackwinebox.localhost";
 	RequestResponseHelper::$html_title   = "BlackWineBox";
 	
 	require(RequestResponseHelper::$root . '/models/helpers/log_helper.php');
@@ -30,13 +32,13 @@
 	/* ********************************************************
 	 * *** Here is the main controlling logic... **************
 	 * ********************************************************/
-	RequestResponseHelper::$request = empty(explode('/', RequestResponseHelper::$path)[2]) ?
-		[2 => 'index'] :
+	RequestResponseHelper::$request = empty(explode('/', RequestResponseHelper::$path)[0]) ?
+		[0 => 'index'] :
 		explode('/', RequestResponseHelper::$path)
 	;
 
-	RequestResponseHelper::$actor_name   = RequestResponseHelper::$request[1];
-	RequestResponseHelper::$actor_action = RequestResponseHelper::$request[2];
+	RequestResponseHelper::$actor_name   = RequestResponseHelper::$request[0];
+	RequestResponseHelper::$actor_action = RequestResponseHelper::$request[1];
 
 	require(RequestResponseHelper::$root . '/require.php');
 
