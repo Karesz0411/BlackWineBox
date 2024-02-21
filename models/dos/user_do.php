@@ -2,6 +2,7 @@
 	/* ********************************************************
 	 * ********************************************************
 	 * ********************************************************/
+	#[\AllowDynamicProperties]
 	class UserDo extends MultipleImageAbstractDo {
 		public $nick_name;
 		public $email;
