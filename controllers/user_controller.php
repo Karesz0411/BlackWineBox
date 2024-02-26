@@ -19,7 +19,6 @@
 				RequestResponseHelper::$actor_action . '_controller.php'
 			);
 	}
-
 	foreach(LogHelper::get() as $log_message) {
 		RequestResponseHelper::addToResponse('log', $log_message);
 	}
