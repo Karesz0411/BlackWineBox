@@ -154,11 +154,10 @@ class UserBo {
 				"Sikeres bejelentkezés.",
 				UserMessagesHelper::MESSAGE_LEVEL_MESSAGE
 			);
-			
 			$cookie_options = array (
                 'expires' => time() + 60*60*24*30, 
                 'path' => '/', 
-                'domain' => 'theapp.artidas.hu',
+                'domain' => 'blackwinebox.localhost',
                 'secure' => true,
                 'httponly' => true,
                 'samesite' => 'Strict' // None || Lax  || Strict

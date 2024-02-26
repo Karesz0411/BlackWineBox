@@ -14,7 +14,7 @@
 	);
 	
 	$user_login_view = new UserLoginView($view_do);
-	
+
 	if ($_POST['login'] == "Bejelentkezés" || $_GET['mo']) {
 		$do->email = empty($_POST['email']) ? $_GET['email'] : $_POST['email'];
 		$do->password = empty($_POST['password']) ? $_GET['password'] : $_POST['password'];

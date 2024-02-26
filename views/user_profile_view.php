@@ -1,16 +1,6 @@
 <?php
 	
 	class UserProfileView extends AbstractView {
-		public function displayMobile(UserDo $user_do) {
-			header('Content-Type: application/json');
-		
-			echo json_encode(
-				array_merge(
-					['response' => UserMessagesHelper::getAllMessages()],
-					['payload' => (array)$user_do]
-				)
-			);
-		}
 		
 		public function displayWeb(UserDo $user_do) {
 			$this->getWebHeader();
