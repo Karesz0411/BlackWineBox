@@ -166,11 +166,9 @@ class UserBo {
 			
 			setcookie('uph', $retrived_do->password_hash, $cookie_options);
 			setcookie('uid', $retrived_do->id, $cookie_options);
-			
-			if (RequestResponseHelper::$method == 'web') {
-				header("Location: " . RequestResponseHelper::$url_root . "/web/user/profile");
-				exit;
-			}
+
+			header("Location: " . RequestResponseHelper::$url_root . "/user/profile");
+			exit;
 		}
 		else {
 			UserMessagesHelper::addToMessages(
