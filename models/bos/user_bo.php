@@ -4,7 +4,7 @@
  * ********************************************************/
 class UserBo {
 	
-	const SECRET_BLACK_MAGIC = "kolbaszosmakosguba";
+	const SECRET_BLACK_MAGIC = "borvillakonnectorseprobobko";
 
 	protected $dao;
 
