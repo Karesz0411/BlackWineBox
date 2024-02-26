@@ -12,14 +12,20 @@
 			RequestResponseHelper::$actor_action
 		]
 	);
+
+	print_r($_POST);
 	
 	$user_login_view = new UserLoginView($view_do);
+
+	print_r($_POST);
 	
-	if ($_POST['login'] == "Bejelentkezés" || $_GET['mo']) {
+	if (isset($_POST['login']) && ($_POST['login'] == "Bejelentkezés" || $_GET['mo'])) {
 		$do->email = empty($_POST['email']) ? $_GET['email'] : $_POST['email'];
 		$do->password = empty($_POST['password']) ? $_GET['password'] : $_POST['password'];
 		
 		$bo->doLogin($do);
+
+		echo("fasz");
 	}
 	
 	$user_login_view->displayWeb($do);
