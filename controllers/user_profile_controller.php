@@ -1,5 +1,6 @@
 <?php
-
+	$do = $do_factory->get(DoFactory::USER);
+	
 	if (empty($_COOKIE['uid'])){
 		header(
 			"Location: " . 	
@@ -9,6 +10,10 @@
 		);
 		exit();		
 	}
+
+	echo("XXXXXXXXXXXXXX");
+	print_r($do);
+	echo("XXXXXXXXXXXXXX");
 	
 	$do = $bo->getById($_COOKIE['uid']);
 	
