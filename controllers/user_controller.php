@@ -6,10 +6,11 @@
 	/* ********************************************************
 	* *** Lets control exectution by actor action... *********
 	* ********************************************************/
+
 	switch (RequestResponseHelper::$actor_action) {
 		case '':
 			RequestResponseHelper::addToResponse('available_actor_actions', [
-			RequestResponseHelper::$url_root . '/' . RequestResponseHelper::$actor_name . '/registration'
+				RequestResponseHelper::$url_root . '/' . RequestResponseHelper::$actor_name . '/registration'
 			]);
 			break;
 		default:

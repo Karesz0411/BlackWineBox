@@ -12,8 +12,8 @@
 	// Get the requested URI
 	// Remove leading and trailing slashes and explode the URI by slashes
 	RequestResponseHelper::$path         = trim($_SERVER['REQUEST_URI'], '/');
-	//RequestResponseHelper::$url_root     = "https://blackwinebox.com";
-	RequestResponseHelper::$url_root     = "blackwinebox.localhost";
+	RequestResponseHelper::$url_root     = "https://blackwinebox.localhost";
+	//RequestResponseHelper::$url_root     = "blackwinebox.localhost";
 	RequestResponseHelper::$html_title   = "BlackWineBox";
 	
 	require(RequestResponseHelper::$root . '/models/helpers/log_helper.php');

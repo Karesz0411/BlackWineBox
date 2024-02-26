@@ -12,7 +12,7 @@
 			RequestResponseHelper::$actor_action
 		]
 	);
-		
+
 	$user_registration_view = new UserRegistrationView($view_do);
 	
 	$page_form_attributes = [
@@ -24,6 +24,7 @@
 	foreach($page_form_attributes as $key => $value) {
 		$do->$value = isset($_POST[$value]) ? $_POST[$value] : null;
 	}
+
 	if (isset($_POST[$page_form_attributes[0]])) {
 		$bo->isRegistrationValid($do);
 		

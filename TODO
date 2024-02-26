@@ -14,3 +14,4 @@ Engineering:
 
     - Make skeleton: abstract backend -> must delete all instances of previous project class names and file names, classes etc.
     - Delete unneccessary functions from remaining classes
+    - Make random text generator for account registration/login
