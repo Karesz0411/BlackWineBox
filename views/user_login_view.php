@@ -1,13 +1,6 @@
 <?php
 	
 	class UserLoginView extends AbstractView {
-		public function displayMobile() {
-			header('Content-Type: application/json');
-		
-			echo json_encode( //TODO: Mit kellene küldeni a mobilosnak? [trisssz]
-				UserMessagesHelper::getAllMessages()
-			);
-		}
 		
 		public function displayWeb(UserDo $user_do) {
 			?>
