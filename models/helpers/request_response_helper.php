@@ -8,7 +8,6 @@
 		public static $url_root     = "";
 		public static $request      = [];
 		public static $project_name = "";
-		public static $method       = "";
 		public static $actor_name   = "";
 		public static $actor_action = "";
 		public static $response     = [];

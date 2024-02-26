@@ -8,7 +8,6 @@
 		],
 		[
 			RequestResponseHelper::$url_root . "/" . 
-			RequestResponseHelper::$method . "/" . 
 			RequestResponseHelper::$actor_name . "/" . 
 			RequestResponseHelper::$actor_action
 		]
@@ -23,10 +22,5 @@
 		$bo->doLogin($do);
 	}
 	
-	if (RequestResponseHelper::$method == 'mobile') {
-		$user_login_view->displayMobile();
-	}
-	else {
-		$user_login_view->displayWeb($do);
-	}
+	$user_login_view->displayWeb($do);
 ?>

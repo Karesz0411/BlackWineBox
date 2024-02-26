@@ -8,7 +8,6 @@
 		],
 		[
 			RequestResponseHelper::$url_root . "/" . 
-			RequestResponseHelper::$method . "/" . 
 			RequestResponseHelper::$actor_name . "/" . 
 			RequestResponseHelper::$actor_action
 		]
@@ -40,11 +39,6 @@
 			);
 		}
 	}
-	
-	if (RequestResponseHelper::$method == 'mobile') {	
-		$image_upload_view->displayMobile();
-	}
-	else {
-		$image_upload_view->displayWeb($do, $do_factory);
-	}
+
+	$image_upload_view->displayWeb($do, $do_factory);
 ?>

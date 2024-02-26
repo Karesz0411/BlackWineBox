@@ -9,7 +9,6 @@
 		],
 		[
 			RequestResponseHelper::$url_root . "/" . 
-			RequestResponseHelper::$method . "/" . 
 			RequestResponseHelper::$actor_name . "/" . 
 			RequestResponseHelper::$actor_action
 		]
@@ -43,10 +42,5 @@
 		);
 	}
 	
-	if (RequestResponseHelper::$method == 'mobile') {
-		$view->displayMobile();
-	}
-	else {
-		$view->displayWeb();
-	}
+	$view->displayWeb();
  ?>

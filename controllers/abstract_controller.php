@@ -7,17 +7,7 @@
 	if ($_POST['form_submission'] === "Regisztrálás" || $_GET['hack_on']) {
 		
 	}
-
-	/**
-	 * Mobile version view
-	 */
-	if (RequestResponseHelper::$method == 'mobile') {
-		header('Content-Type: application/json');
-		
-		echo json_encode( //TODO: Mit kellene küldeni a mobilosnak? [trisssz]
-			AbstractMessagesHelper::getAllMessages()
-		);
-	}
+	
 	/**
 	 * Web
 	 */

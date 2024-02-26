@@ -4,7 +4,6 @@
 		header(
 			"Location: " . 	
 			RequestResponseHelper::$url_root . "/" . 
-			RequestResponseHelper::$method . "/" . 
 			RequestResponseHelper::$actor_name . "/" . 
 			"login"
 		);
@@ -20,18 +19,11 @@
 		],
 		[
 			RequestResponseHelper::$url_root . "/" . 
-			RequestResponseHelper::$method . "/" . 
 			RequestResponseHelper::$actor_name . "/" . 
 			RequestResponseHelper::$actor_action
 		]
 	);
 	
 	$user_profile_view = new UserProfileView($view_do);
-	
-	if (RequestResponseHelper::$method == 'mobile') {
-		$user_profile_view->displayMobile($do);
-	}
-	else {
-		$user_profile_view->displayWeb($do);
-	}
+	$user_profile_view->displayWeb($do);
  ?>

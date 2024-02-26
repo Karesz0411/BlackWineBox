@@ -8,12 +8,11 @@
 		],
 		[
 			RequestResponseHelper::$url_root . "/" . 
-			RequestResponseHelper::$method . "/" . 
 			RequestResponseHelper::$actor_name . "/" . 
 			RequestResponseHelper::$actor_action
 		]
 	);
-	
+		
 	$user_registration_view = new UserRegistrationView($view_do);
 	
 	$page_form_attributes = [
@@ -33,11 +32,10 @@
 				"The registration was successful!",
 				UserMessagesHelper::MESSAGE_LEVEL_MESSAGE
 			);
-			
+
 			$bo->create($do);
 			header("Location: " . 
 				RequestResponseHelper::$url_root . "/" . 
-				RequestResponseHelper::$method . "/" . 
 				RequestResponseHelper::$actor_name . "/" . "login");
 		}
 		else {
@@ -48,10 +46,5 @@
 		}
 	}
 	
-	if (RequestResponseHelper::$method == 'mobile') {	
-		$user_registration_view->displayMobile();
-	}
-	else {
-		$user_registration_view->displayWeb($do);
-	}
+	$user_registration_view->displayWeb($do);
 ?>
