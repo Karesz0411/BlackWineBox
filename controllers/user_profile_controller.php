@@ -10,10 +10,6 @@
 		);
 		exit();		
 	}
-
-	echo("XXXXXXXXXXXXXX");
-	print_r($do);
-	echo("XXXXXXXXXXXXXX");
 	
 	$do = $bo->getById($_COOKIE['uid']);
 	
