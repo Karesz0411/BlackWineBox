@@ -10,7 +10,6 @@
 		public $password_again;
 		public $password_hash;
 		public $birthday_at;
-		public $is_above_legal_drinking_age;
 		public $is_administrator;
 		
 		public $profile_image_icon;
