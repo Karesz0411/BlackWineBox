@@ -20,8 +20,7 @@
 		'nick_name',
 		'email',
 		'password',
-		'password_again',
-		'birthday_at'
+		'password_again'
 	];
 	foreach($page_form_attributes as $key => $value) {
 		$do->$value = isset($_POST[$value]) ? $_POST[$value] : null;

@@ -24,7 +24,7 @@
 					MAIN.name AS name,
 					MAIN.birthday_at AS birthday_at
 				FROM
-					users MAIN
+					bwb_users MAIN
 				WHERE
 					MAIN.is_active = 1
 				ORDER BY
@@ -52,13 +52,12 @@
 		function create(array $parameters) {
 			$query_string = "/* __CLASS__ __FUNCTION__ __FILE__ __LINE__ */
 				INSERT INTO
-					users
+					bwb_users
 				SET
 					nick_name        = ?,
 					email            = ?,
 					password_hash    = ?,
-					birthday_at      = ?,
-					is_administrator = 0,
+					is_admin 		 = 0,
 					is_active        = 1,
 					created_at       = NOW(),
 					updated_at       = NOW()
@@ -97,7 +96,7 @@
 		function delete($parameters) {
 			$query_string = "/* __CLASS__ __FUNCTION__ __FILE__ __LINE__ */
 				UPDATE
-					users
+					bwb_users
 				SET
 					is_active  = 0,
 					updated_at = NOW()
@@ -137,7 +136,7 @@
 				SELECT
 					'not_unique' AS 'is_nick_name_unique'
 				FROM
-					users MAIN
+					bwb_users MAIN
 				WHERE
 					MAIN.nick_name = ?
 			";
@@ -156,7 +155,7 @@
 				
 				$record = $statement->fetchAll();
 				
-				return !$record[0]['is_nick_name_unique'] == 'not_unique';
+				return !isset($record[0]) || !$record[0]['is_nick_name_unique'] == 'not_unique';
 			}
 			catch(Exception $exception) {
 				LogHelper::add('Error: ' . $exception->getMessage());
@@ -174,7 +173,7 @@
 				SELECT
 					'not_unique' AS 'is_email_unique'
 				FROM
-					users MAIN
+					bwb_users MAIN
 				WHERE
 					MAIN.email = ?
 			";
@@ -193,7 +192,7 @@
 				
 				$record = $statement->fetchAll();
 				
-				return !$record[0]['is_email_unique'] == 'not_unique';
+				return !isset($record[0]) || !$record[0]['is_email_unique'] == 'not_unique';
 			}
 			catch(Exception $exception) {
 				LogHelper::add('Error: ' . $exception->getMessage());
@@ -212,7 +211,7 @@
 					MAIN.id AS id,
 					MAIN.password_hash AS password_hash
 				FROM 
-					users MAIN 
+					bwb_users MAIN 
 				WHERE 
 					MAIN.email = ?
 			";
@@ -256,7 +255,7 @@
 					MAIN.created_at AS created_at,
 					MAIN.updated_at AS updated_at
 				FROM 
-					users MAIN 
+					bwb_users MAIN 
 				WHERE 
 					MAIN.id = ?
 			";

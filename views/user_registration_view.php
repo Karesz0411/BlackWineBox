@@ -40,9 +40,6 @@
 					<label for="password_again">Jelszó újra begépelve</label>
 						<input name="password_again" type="password" value="<?php echo($user_do->password_again); ?>" />
 					<br />
-					<label for="birthday_at">Születési idő</label>
-						<input name="birthday_at" type="text" value="<?php echo($user_do->birthday_at); ?>" />
-					<br />
 						<input name="registration" type="submit" value="Regisztrálás"/>
 				</form>
 				

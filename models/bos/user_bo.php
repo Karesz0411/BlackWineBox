@@ -114,14 +114,14 @@ class UserBo {
 			);
 		}
 		
-		if ($do->birthday_at == '') {
+		/*if ($do->birthday_at == '') {
 			UserMessagesHelper::addToMessages(
 				"A \"Születési idő\" mező nem lehet üres!",
 				UserMessagesHelper::MESSAGE_LEVEL_ERROR
 			);
 			
 			UserMessagesHelper::$invalid_form_fields['birthday_at'] = true;
-		}
+		}*/
 	}
 	
 	/* ********************************************************
@@ -133,7 +133,7 @@ class UserBo {
 				$do->nick_name,
 				$do->email,
 				$this->getHashFromPassword($do), //TODO: Make hashing method more secure [trissz]
-				$do->birthday_at
+				//$do->birthday_at
 			]
 		);
 	}

@@ -10,8 +10,9 @@
 		public $password_again;
 		public $password_hash;
 		public $birthday_at;
-		public $is_administrator;
-		
+		public $is_admin;
+		public $owned_products;
+
 		public $profile_image_icon;
 		public $profile_image_small;
 		public $profile_image_medium;
@@ -27,8 +28,6 @@
 					$this->$key = $value;
 				}
 			}
-			
-			$this->parent_id = $this->item_id;
 			
 			foreach(
 				[
