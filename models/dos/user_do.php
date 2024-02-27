@@ -93,8 +93,6 @@
 			$return_array = array(
 				'Felhasználónév' => $this->nick_name,
 				'E-mail' => $this->email,
-				'Szülétésnap' => $this->birthday_at,
-				'Nagykorú' => $this->is_above_legal_drinking_age,
 				'Profil létrehozva' => $this->created_at,
 			);
 			
