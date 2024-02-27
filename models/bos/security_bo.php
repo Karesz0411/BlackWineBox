@@ -24,7 +24,6 @@
 				header(
 					"Location: " . 	
 					TavernRaidRequestResponseHelper::$url_root . "/" . 
-					TavernRaidRequestResponseHelper::$method . "/" . 
 					TavernRaidRequestResponseHelper::$actor_name . "/" . 
 					"login"
 				);
