@@ -19,7 +19,7 @@
 					id AS id,
 					password_hash AS password_hash
 				FROM 
-					users MAIN 
+					bwb_users MAIN 
 				WHERE 
 					MAIN.id = ?
 			";

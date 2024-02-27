@@ -24,7 +24,8 @@
 			RequestResponseHelper::$actor_action
 		]
 	);
-	
 	$user_profile_view = new UserProfileView($view_do);
 	$user_profile_view->displayWeb($do);
+	echo  "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+	print_r($user_profile_view);
  ?>
