@@ -1,14 +1,32 @@
-CEO:
+FunkciÃ³k a hsup projekthez:
 
+User:
+	-registration
+	-login
+	-forget password
+	-email sender
+	-profile
+	-save payment method
+	(-"QR code profile share")
 
-CMO:
+Shop:
+	-List of the orderable boxes
+	-More detail on a single box
+	-Payment checking
+	-Shopping cart
+	-Searching bar
+	-User can comment under the boxes, and can rate them
 
-- Szövegeket kitalálni a honlapra (és a webre)
+Main:
+	-User can rate the site
+	-Recommendations
+	-Contact with the developers
+	-Report bug menu
+	-Show the sponsores
+	-About us
 
-CFO:
-
-
-CTO:
+Others:
+	-Downloadable for mobile (Android / IOS)
 
 Engineering:
 
