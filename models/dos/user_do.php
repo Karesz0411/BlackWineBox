@@ -9,7 +9,6 @@
 		public $password;
 		public $password_again;
 		public $password_hash;
-		//public $birthday_at;
 		public $is_admin;
 		public $owned_products;
 
