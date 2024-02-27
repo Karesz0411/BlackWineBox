@@ -19,13 +19,13 @@
 			$query_string = "/* __CLASS__ __FUNCTION__ __FILE__ __LINE__ */
 				SELECT
 					MAIN.id AS id,
-					MAIN.name AS name
+					MAIN.nick_name AS nick_name
 				FROM
-					users MAIN
+					bwb_users MAIN
 				WHERE
 					MAIN.is_active = 1
 				ORDER BY
-					MAIN.name ASC
+					MAIN.nick_name ASC
 			";
 
 			try {
@@ -48,9 +48,9 @@
 		function createUser($parameters) {
 			$query_string = "/* __CLASS__ __FUNCTION__ __FILE__ __LINE__ */
 				INSERT INTO
-					users
+					bwb_users
 				SET
-					name       = ?,
+					nick_name  = ?,
 					is_active  = 1,
 					created_at = NOW(),
 					updated_at = NOW()
@@ -90,7 +90,7 @@
 		function deleteUser($parameters) {
 			$query_string = "/* __CLASS__ __FUNCTION__ __FILE__ __LINE__ */
 				UPDATE
-					users
+					bwb_users
 				SET
 					is_active  = 0,
 					updated_at = NOW()
