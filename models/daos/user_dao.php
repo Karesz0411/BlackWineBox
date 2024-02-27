@@ -248,11 +248,10 @@
 					MAIN.nick_name AS nick_name,
 					MAIN.email AS email,
 					MAIN.password_hash AS password_hash,
-					MAIN.birthday_at AS birthday_at,
-					MAIN.birthday_at < DATE_SUB(NOW(), INTERVAL 18 YEAR) AS is_above_legal_drinking_age,
-					MAIN.is_administrator AS is_administrator,
 					MAIN.is_active AS is_active,
 					MAIN.created_at AS created_at,
+					MAIN.is_admin AS is_admin,
+					MAIN.owned_products AS owned_products,
 					MAIN.updated_at AS updated_at
 				FROM 
 					bwb_users MAIN 
