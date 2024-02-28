@@ -24,7 +24,7 @@
 	require(RequestResponseHelper::$root . '/models/dos/parent_image_abstract_do.php');
 	require(RequestResponseHelper::$root . '/models/dos/multiple_image_abstract_do.php');
 	require(RequestResponseHelper::$root . '/models/dos/user_do.php');
-	
+
 	LogHelper::add('--------------------------------------------------------------------------------');
 	LogHelper::add(date('Y-m-d H:i:s', time()));
 	LogHelper::add('Starting up engines...');

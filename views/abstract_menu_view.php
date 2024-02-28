@@ -6,6 +6,8 @@
 	<br/>
 	<li><a href="/item/create">Item Create</a></li>
 	<br/>
+	<li><a href="/box_configuration/list">Box Configuration List</a></li>
+	<br/>
 	<li><a href="/image/upload">Image Upload</a></li>
 	<br/>
 	<li><a href="/documentation/index">Documentation Index</a></li>

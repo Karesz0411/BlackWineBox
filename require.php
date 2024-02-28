@@ -11,6 +11,7 @@
 	require(RequestResponseHelper::$root . '/views/user_profile_image_upload_view.php');
 	require(RequestResponseHelper::$root . '/views/image_upload_view.php');
 	require(RequestResponseHelper::$root . '/views/item_create_view.php');
+	require(RequestResponseHelper::$root . '/views/box_configuration_list_view.php');
 	
 	 /*******************************
 	 *************MODELS*************
@@ -25,6 +26,7 @@
 		require(RequestResponseHelper::$root . '/models/bos/user_bo.php');
 		require(RequestResponseHelper::$root . '/models/bos/security_bo.php');
 		require(RequestResponseHelper::$root . '/models/bos/item_bo.php');
+		require(RequestResponseHelper::$root . '/models/bos/box_configuration_bo.php');
 		
 		/*****************************
 		*************DAOS*************
@@ -33,6 +35,7 @@
 		require(RequestResponseHelper::$root . '/models/daos/common_dao.php');
 		require(RequestResponseHelper::$root . '/models/daos/security_dao.php');
 		require(RequestResponseHelper::$root . '/models/daos/item_dao.php');
+		require(RequestResponseHelper::$root . '/models/daos/box_configuration_dao.php');
 		
 		/*****************************
 		*************DOS**************
@@ -42,6 +45,7 @@
 		require(RequestResponseHelper::$root . '/models/dos/user_profile_image_do.php');
 		require(RequestResponseHelper::$root . '/models/dos/item_do.php');	
 		require(RequestResponseHelper::$root . '/models/dos/logo_do.php');
+		require(RequestResponseHelper::$root . '/models/dos/box_configuration_do.php');
 
 		
 		/********************************

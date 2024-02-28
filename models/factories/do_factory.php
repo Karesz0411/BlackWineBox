@@ -9,6 +9,7 @@
 		const IMAGE              = "Image";
 		const ITEM               = "Item";
 		const LOGO               = "Logo";
+		const BOX_CONFIGURATION	 = "BoxConfiguration";
 		
 		/* ********************************************************
 		 * ********************************************************
@@ -30,6 +31,7 @@
 				self::IMAGE,
 				self::ITEM,
 				self::LOGO,
+				self::BOX_CONFIGURATION,
 			];
 		}
 	}
