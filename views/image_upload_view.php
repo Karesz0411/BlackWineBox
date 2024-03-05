@@ -41,7 +41,7 @@
 							<?php foreach($do_factory->getActorList() as $actor) { ?>
 								<option 
 									value="<?php echo($actor); ?>"
-									<?php if ($actor == $image_do->actor) {echo("selected");} ?>
+									<?php if ($actor == $image_do->$actor) {echo("selected");} ?>
 								>
 									<?php echo($actor); ?>
 								</option>
