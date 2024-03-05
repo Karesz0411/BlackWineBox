@@ -25,7 +25,7 @@
                     MAIN.name AS name,
                     MAIN.description AS description
                 FROM
-                    16153_theapp.box_configurations MAIN
+                    16153_theapp.bwb_box_configurations MAIN
                 WHERE
                     MAIN.is_active = 1
                 ORDER BY

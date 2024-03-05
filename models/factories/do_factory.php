@@ -10,6 +10,7 @@
 		const ITEM               = "Item";
 		const LOGO               = "Logo";
 		const BOX_CONFIGURATION	 = "BoxConfiguration";
+		const WINE_ATTRIBUTES 	 = "WineAttributes";
 		
 		/* ********************************************************
 		 * ********************************************************
@@ -32,6 +33,7 @@
 				self::ITEM,
 				self::LOGO,
 				self::BOX_CONFIGURATION,
+				self::WINE_CONFIGURATION,
 			];
 		}
 	}
