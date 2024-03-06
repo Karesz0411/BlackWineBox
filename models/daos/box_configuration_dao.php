@@ -18,7 +18,7 @@
 		 * ********************************************************
 		 * ********************************************************/
 		
-         function getAll() {
+        function getAll() {
 			$query_string = "/* __CLASS__ __FUNCTION__ __FILE__ __LINE__ */
                 SELECT
                     MAIN.id AS id,
