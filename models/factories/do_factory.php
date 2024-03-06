@@ -33,9 +33,8 @@
 				self::ITEM,
 				self::LOGO,
 				self::BOX_CONFIGURATION,
-				self::WINE_CONFIGURATION,
+				self::WINE_ATTRIBUTES,
 			];
 		}
 	}
-
 ?>
