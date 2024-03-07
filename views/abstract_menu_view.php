@@ -10,6 +10,9 @@
 	<br/>
 	<li><a href="/image/upload">Image Upload</a></li>
 	<br/>
+	<li><a href="/wine_attributes/create">Wine Attributes Create</a></li>
+	<li><a href="/wine_attributes/list">Wine Attributes List</a></li>
+	<br/>
 	<li><a href="/documentation/index">Documentation Index</a></li>
 	<li><a href="/documentation/logo">Documentation Logo</a></li>
 </ul>

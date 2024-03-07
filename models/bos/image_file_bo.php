@@ -84,7 +84,7 @@
                 );
 
                 //Create appropriate resized and cropped images files from PNG source
-                $this->createImageVerions();
+                $this->createImageVersions();
             }
         }
 
@@ -131,12 +131,9 @@
 
                 return true;
             }
-            else {
-                $this->is_file_input_valid = false;
-                $this->messages[] = 'File type not supported: ' . $this->file_extension;
 
-                return false;
-            }
+            $this->is_file_input_valid = false;
+            $this->messages[] = 'File type not supported: ' . $this->file_extension;
 
             return false;
         }
@@ -252,12 +249,9 @@
         /* ********************************************************
          * ********************************************************
          * ********************************************************/
-        protected function createImageVerions() {
+        protected function createImageVersions() {
             switch ($this->do->class_actor) {
                 case strtolower(DoFactory::USER):
-                    $this->createBasicSquareImages();
-                    break;
-                case strtolower(DoFactory::ACHIEVEMENT):
                     $this->createBasicSquareImages();
                     break;
                 default:

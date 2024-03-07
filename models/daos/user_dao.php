@@ -14,6 +14,33 @@
 			$this->do_factory = new DoFactory();
 		}
 
+		function getUsers() {
+			$query_string = "/* __CLASS__ __FUNCTION__ __FILE__ __LINE__ */
+				SELECT
+					MAIN.name AS name
+				FROM
+					bwb_users MAIN
+				WHERE
+					MAIN.is_active = 1
+				ORDER BY
+					MAIN.name ASC
+			";
+
+			try {
+				$handler = ($this->database_connection_bo)->getConnection();
+				$statement = $handler->prepare($query_string);
+				$statement->execute();
+				
+				return $statement->fetchAll();
+			}
+			catch(Exception $exception) {
+				LogHelper::add('Error: ' . $exception->getMessage());
+				RequestResponseHelper::addToResponse('errors', $exception->getMessage());
+
+				return false;
+			}
+		}
+
 		/* ********************************************************
 		 * ********************************************************
 		 * ********************************************************/
@@ -85,7 +112,7 @@
 				);
 			}
 			catch(Exception $exception) {
-				TavernRaidRequestResponseHelper::addToResponse('errors', $exception->getMessage());
+				RequestResponseHelper::addToResponse('errors', $exception->getMessage());
 				return false;
 			}
 		}

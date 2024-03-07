@@ -2,7 +2,7 @@
 	/* ********************************************************
 	 * ********************************************************
 	 * ********************************************************/
-	class BoxConfigurationDao {
+	class WineAttributesDao {
 		protected $database_connection_bo;
 		protected $do_factory;
 
@@ -21,7 +21,7 @@
          function create(array $parameters) {
 			$query_string = "/* __CLASS__ __FUNCTION__ __FILE__ __LINE__ */
 				INSERT INTO
-					bwb_wine_attributes
+					16153_theapp.bwb_wine_attributes
 				SET
                     wine_name           = ?,
                     aroma               = ?,
@@ -60,7 +60,7 @@
 				);
 			}
 			catch(Exception $exception) {
-				TavernRaidRequestResponseHelper::addToResponse('errors', $exception->getMessage());
+				RequestResponseHelper::addToResponse('errors', $exception->getMessage());
 				return false;
 			}
 		}
@@ -116,7 +116,7 @@
 					MAIN.id           AS id,
 					MAIN.wine_name    AS wine_name
 				FROM
-					wine_attributes MAIN
+					16153_theapp.bwb_wine_attributes MAIN
 				WHERE
 					MAIN.is_active = 1
 				ORDER BY

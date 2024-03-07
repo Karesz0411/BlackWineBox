@@ -74,29 +74,24 @@
 		}
 		
 		public function getAttributeArray() {
-			$return_array = array(
+			return array(
 				'id' => $this->id,
 				'nick_name' => $this->nick_name,
 				'email' => $this->email,
-				'birthday_at' => $this->birthday_at,
-				'is_above_legal_drinking_age' => $this->is_above_legal_drinking_age,
-				'is_administrator' => $this->is_administrator,
+				'is_administrator' => $this->is_admin,
 				'is_active' => $this->is_active,
+				'owned_products' => $this->owned_products,
 				'created_at' => $this->created_at,
 				'updated_at' => $this->updated_at,
 			);
-			
-			return $return_array;
 		}
 		
 		public function getUserProfileArray() {
-			$return_array = array(
+			return array(
 				'Felhasználónév' => $this->nick_name,
 				'E-mail' => $this->email,
 				'Profil létrehozva' => $this->created_at,
 			);
-			
-			return $return_array;
 		}
 	}
 ?>

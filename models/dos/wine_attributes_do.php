@@ -3,7 +3,7 @@
 	 * ********************************************************
 	 * ********************************************************/
 	#[\AllowDynamicProperties]
-	class BoxConfigurationDo extends MultipleImageAbstractDo {
+	class WineAttributesDo extends MultipleImageAbstractDo {
 		public $wine_name;
 		public $aroma;
         public $flavor;
@@ -72,14 +72,14 @@
 		}
 		
 		public function getAttributeArray() {
-			$return_array = array(
+			return array(
 				'id' => $this->id,
 				'wine_name' => $this->wine_name,
                 'aroma' => $this->aroma,
                 'flavor' => $this->flavor,
-                'apparance' => $this->apparance,
+                'apparance' => $this->appearance,
                 'alcohol_content' => $this->alcohol_content,
-                'sweetness' => $this->weetness,
+                'sweetness' => $this->sweetness,
                 'making_techniques' => $this->making_techniques,
                 'ageability' => $this->ageability,
                 'intensity' => $this->intensity,
@@ -88,17 +88,6 @@
 				'created_at' => $this->created_at,
 				'updated_at' => $this->updated_at,
 			);
-            
-			return $return_array;
 		}
 	}
 ?>
-
-
-
-
-
-
-
-
- , , , , , , , , , , ,

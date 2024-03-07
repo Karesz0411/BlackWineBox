@@ -13,8 +13,7 @@
 		
 		public function create(ItemDo $do) {
 			return $this->dao->create([
-				$do->name,
-				$do->is_alcoholic
+				$do->name
 			]);
 		}
 		
