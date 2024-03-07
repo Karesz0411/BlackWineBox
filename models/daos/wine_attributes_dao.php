@@ -65,6 +65,9 @@
 			}
 		}
         
+		/* ********************************************************
+		 * ********************************************************
+		 * ********************************************************/
         
         function getAll() {
 			$query_string = "/* __CLASS__ __FUNCTION__ __FILE__ __LINE__ */
@@ -87,6 +90,38 @@
                 ORDER BY
                     MAIN.wine_name ASC;
             ";
+
+			try {
+				$handler = ($this->database_connection_bo)->getConnection();
+				$statement = $handler->prepare($query_string);
+				$statement->execute();
+				
+				return $statement->fetchAll();
+			}
+			catch(Exception $exception) {
+				LogHelper::add('Error: ' . $exception->getMessage());
+				RequestResponseHelper::addToResponse('errors', $exception->getMessage());
+
+				return false;
+			}
+		}
+
+		/* ********************************************************
+		 * ********************************************************
+		 * ********************************************************/
+
+		public function getList() {
+			$query_string = "/* __CLASS__ __FUNCTION__ __FILE__ __LINE__ */
+				SELECT
+					MAIN.id           AS id,
+					MAIN.wine_name    AS wine_name
+				FROM
+					wine_attributes MAIN
+				WHERE
+					MAIN.is_active = 1
+				ORDER BY
+					MAIN.wine_name ASC
+			";
 
 			try {
 				$handler = ($this->database_connection_bo)->getConnection();
