@@ -1,0 +1,71 @@
+body
+{
+    background-color: beige;
+}
+
+h1
+{
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+p
+{
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a
+{
+    text-decoration: none;
+    color: purple;
+    transition: color 0.5s ease-out;
+}
+
+a:hover
+{
+    color: blue;
+    transition: color 0.5s ease;
+}
+
+button, input[type="submit"]
+{
+    border: 0.2em solid black;
+    border-radius: 0.2em;
+    background-color: lightgray;
+    transition: background-color 0.5s ease-out;
+}
+
+button:hover, input[type="submit"]:hover
+{
+    background-color: darkgray;
+    transition: background-color 0.5s ease;
+}
+
+form>input, form>label
+{
+    margin-right: 1em;
+    margin-bottom: 1.5em;
+}
+
+select, select>option
+{
+    width: fit-content;
+}
+
+.footer_hr
+{
+    border: 0.1em solid black;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#messages
+{
+    background-color: #1b1b1b;
+    color: #41FF00 ;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    padding: 1em;
+}

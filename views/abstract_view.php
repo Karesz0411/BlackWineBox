@@ -42,6 +42,7 @@
 		
 		public function getWebFooter() {
 			?>
+			<hr class="footer_hr">
 				<div id="messages">
 					<pre>
 						<?php 

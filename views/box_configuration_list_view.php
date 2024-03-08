@@ -7,8 +7,9 @@
 
 			foreach ($box_configuration_do_list as $do) {
 				foreach ($do->getAttributeArray() as $key => $value) {
-					echo("<p>" . $key . ": " . $value . "</p>");
+					if ( $value ) echo("<p>" . $key . ": " . $value . "</p>");
 				}
+				?><hr><?php
 			}
 			
 			?>
