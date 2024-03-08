@@ -13,7 +13,16 @@
 		
 		public function create(WineAttributesDo $do) {
 			return $this->dao->create([
-				$do->wine_name
+				$do->wine_name,
+				$do->aroma,
+				$do->flavor,
+				$do->appearance,
+				$do->alcohol_content,
+				$do->sweetness,
+				$do->making_techniques,
+				$do->ageability,
+				$do->intensity,
+				$do->place_of_production
 			]);
 		}
 		

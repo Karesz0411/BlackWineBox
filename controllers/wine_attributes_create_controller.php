@@ -30,7 +30,7 @@
 	foreach($page_form_attributes as $key => $value) {
 		$do->$value = isset($_POST[$value]) ? $_POST[$value] : null;
 	}
-	if (isset($_POST[$page_form_attributes[0]])) {
+	if (isset($_POST[$page_form_attributes[0]]) && $_POST['create'] == 'Létrehozás') {
 		$do_list = $bo->getList();
 		
 		foreach($do_list as $list_element) {
