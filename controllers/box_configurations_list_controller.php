@@ -14,6 +14,6 @@
 		]
 	);
 
-	$box_configuration_list_view = new BoxConfigurationListView($view_do);
+	$box_configuration_list_view = new BoxConfigurationsListView($view_do);
 	$box_configuration_list_view->displayWeb($do_list);
  ?>

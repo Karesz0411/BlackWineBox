@@ -36,7 +36,7 @@
 			}
 		}
 		
-		if ($bo->isWineAttributesCreateValid($do)) {
+		if ($bo->isBoxConfigurationsCreateValid($do)) {
 			$last_inserted_box_configurations_id = $bo->create($do);
 			
 			if ($last_inserted_box_configurations_id != null) {
