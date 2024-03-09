@@ -1,5 +1,5 @@
 <?php
-	$do = $do_factory->get(DoFactory::BOX_CONFIGURATION);
+	$do = $do_factory->get(DoFactory::BOX_CONFIGURATIONS);
     $do_list = $bo->getAll();
 	
 	$view_do = new ViewDo(

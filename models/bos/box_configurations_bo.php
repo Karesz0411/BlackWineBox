@@ -1,10 +1,10 @@
 <?php 
-	class BoxConfigurationBo {
+	class BoxConfigurationsBo {
 		
 		protected $dao;
 
 		public function __construct() {
-			$this->dao = new BoxConfigurationDao(new MysqlDatabaseBo());
+			$this->dao = new BoxConfigurationsDao(new MysqlDatabaseBo());
 		}
 		
 		public function getAll() {
@@ -21,7 +21,7 @@
 			}
 			else {
 				foreach ($records as $record) {
-					$do_list[] = $do_factory->get(DoFactory::BOX_CONFIGURATION, $record);
+					$do_list[] = $do_factory->get(DoFactory::BOX_CONFIGURATIONS, $record);
 				}
 			}
 			

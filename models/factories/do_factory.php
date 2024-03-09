@@ -9,7 +9,7 @@
 		const IMAGE              = "Image";
 		const ITEM               = "Item";
 		const LOGO               = "Logo";
-		const BOX_CONFIGURATION	 = "BoxConfiguration";
+		const BOX_CONFIGURATIONS = "BoxConfigurations";
 		const WINE_ATTRIBUTES 	 = "WineAttributes";
 		
 		/* ********************************************************
@@ -32,7 +32,7 @@
 				self::IMAGE,
 				self::ITEM,
 				self::LOGO,
-				self::BOX_CONFIGURATION,
+				self::BOX_CONFIGURATIONS,
 				self::WINE_ATTRIBUTES,
 			];
 		}

@@ -11,7 +11,7 @@
 	require(RequestResponseHelper::$root . '/views/user_profile_image_upload_view.php');
 	require(RequestResponseHelper::$root . '/views/image_upload_view.php');
 	require(RequestResponseHelper::$root . '/views/item_create_view.php');
-	require(RequestResponseHelper::$root . '/views/box_configuration_list_view.php');
+	require(RequestResponseHelper::$root . '/views/box_configurations_list_view.php');
 	require(RequestResponseHelper::$root . '/views/wine_attributes_create_view.php');
 	require(RequestResponseHelper::$root . '/views/wine_attributes_list_view.php');
 	
@@ -28,7 +28,7 @@
 		require(RequestResponseHelper::$root . '/models/bos/user_bo.php');
 		require(RequestResponseHelper::$root . '/models/bos/security_bo.php');
 		require(RequestResponseHelper::$root . '/models/bos/item_bo.php');
-		require(RequestResponseHelper::$root . '/models/bos/box_configuration_bo.php');
+		require(RequestResponseHelper::$root . '/models/bos/box_configurations_bo.php');
 		require(RequestResponseHelper::$root . '/models/bos/wine_attributes_bo.php');
 		
 		/*****************************
@@ -38,7 +38,7 @@
 		require(RequestResponseHelper::$root . '/models/daos/common_dao.php');
 		require(RequestResponseHelper::$root . '/models/daos/security_dao.php');
 		require(RequestResponseHelper::$root . '/models/daos/item_dao.php');
-		require(RequestResponseHelper::$root . '/models/daos/box_configuration_dao.php');
+		require(RequestResponseHelper::$root . '/models/daos/box_configurations_dao.php');
 		require(RequestResponseHelper::$root . '/models/daos/wine_attributes_dao.php');
 		
 		/*****************************
@@ -49,7 +49,7 @@
 		require(RequestResponseHelper::$root . '/models/dos/user_profile_image_do.php');
 		require(RequestResponseHelper::$root . '/models/dos/item_do.php');	
 		require(RequestResponseHelper::$root . '/models/dos/logo_do.php');
-		require(RequestResponseHelper::$root . '/models/dos/box_configuration_do.php');
+		require(RequestResponseHelper::$root . '/models/dos/box_configurations_do.php');
 		require(RequestResponseHelper::$root . '/models/dos/wine_attributes_do.php');
 
 		

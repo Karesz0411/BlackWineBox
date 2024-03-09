@@ -3,14 +3,14 @@
 	 * ********************************************************
 	 * ********************************************************/
 	#[\AllowDynamicProperties]
-	class BoxConfigurationDo extends MultipleImageAbstractDo {
+	class BoxConfigurationsDo extends MultipleImageAbstractDo {
 		public $name;
 		public $description;
 
 		
 		function __construct($attributes = null, $class_actor = null) {
 			$this->class_actor = $class_actor;
-			$this->parent_class_actor = DoFactory::BOX_CONFIGURATION;
+			$this->parent_class_actor = DoFactory::BOX_CONFIGURATIONS;
 			
 			if ($attributes != null) {
 				foreach ($attributes as $key => $value) {

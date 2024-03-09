@@ -1,6 +1,6 @@
 <?php
 	
-	class BoxConfigurationListView extends AbstractView {
+	class BoxConfigurationsListView extends AbstractView {
 		
 		public function displayWeb($box_configuration_do_list) {
 			$this->getWebHeader();

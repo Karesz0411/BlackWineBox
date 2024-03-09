@@ -1,7 +1,7 @@
 <?php
 	header('Content-Type: text/html; charset=utf-8');
 
-	$bo = new BoxConfigurationBo();
+	$bo = new BoxConfigurationsBo();
 
 	/* ********************************************************
 	* *** Lets control exectution by actor action... *********

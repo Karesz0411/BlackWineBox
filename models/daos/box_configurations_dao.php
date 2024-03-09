@@ -2,7 +2,7 @@
 	/* ********************************************************
 	 * ********************************************************
 	 * ********************************************************/
-	class BoxConfigurationDao {
+	class BoxConfigurationsDao {
 		protected $database_connection_bo;
 		protected $do_factory;
 
