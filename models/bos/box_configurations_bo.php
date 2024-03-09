@@ -3,9 +3,17 @@
 		
 		protected $dao;
 
+		/* ********************************************************
+		* ********************************************************
+		* ********************************************************/
+
 		public function __construct() {
 			$this->dao = new BoxConfigurationsDao(new MysqlDatabaseBo());
 		}
+
+		/* ********************************************************
+		* ********************************************************
+		* ********************************************************/
 		
 		public function getAll() {
             $do_factory = new DoFactory();
@@ -15,7 +23,7 @@
 			
 			if (empty($records)) {
 				UserMessagesHelper::addToMessages(
-					"Nincs még feltöltött tárgy!",
+					"Nincs még feltöltött box konfigurációk!",
 					UserMessagesHelper::MESSAGE_LEVEL_ERROR
 				);
 			}
@@ -26,6 +34,19 @@
 			}
 			
 			return $do_list;
+		}
+
+		/* ********************************************************
+		* ********************************************************
+		* ********************************************************/
+
+		public function create(BoxConfigurationsDo $do) {
+			return ($this->dao)->create(
+				[
+					$do->name,
+					$do->description
+				]
+			);
 		}
 	}
 ?>
