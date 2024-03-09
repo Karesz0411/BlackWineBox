@@ -46,7 +46,32 @@
 				return false;
 			}
 		}
+		function create(array $parameters) {
+			$query_string = "/* __CLASS__ __FUNCTION__ __FILE__ __LINE__ */
+				INSERT INTO
+					16153_theapp.bwb_box_configurations
+				SET
+					name          		= ?,
+					description         = ?,
+					is_active           = 1,
+					created_at          = NOW(),
+					updated_at          = NOW()
+			";
 
+			try {
+				$handler = ($this->database_connection_bo)->getConnection();
+				$statement = $handler->prepare($query_string);
+				$statement->execute();
+				
+				return $statement->fetchAll();
+			}
+			catch(Exception $exception) {
+				LogHelper::add('Error: ' . $exception->getMessage());
+				RequestResponseHelper::addToResponse('errors', $exception->getMessage());
+
+				return false;
+			}
+		}
 		
 	}
 ?>
