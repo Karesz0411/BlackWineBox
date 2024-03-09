@@ -17,7 +17,30 @@
 		/* ********************************************************
 		 * ********************************************************
 		 * ********************************************************/
-		
+		function getList() {
+			$query_string = "/* __CLASS__ __FUNCTION__ __FILE__ __LINE__ */
+				SELECT 
+					MAIN.id AS id,
+					MAIN.name AS name
+				FROM 
+					16153_theapp.bwb_box_configurations
+            ";
+
+			try {
+				$handler = ($this->database_connection_bo)->getConnection();
+				$statement = $handler->prepare($query_string);
+				$statement->execute();
+				
+				return $statement->fetchAll();
+			}
+			catch(Exception $exception) {
+				LogHelper::add('Error: ' . $exception->getMessage());
+				RequestResponseHelper::addToResponse('errors', $exception->getMessage());
+
+				return false;
+			}
+		}
+
         function getAll() {
 			$query_string = "/* __CLASS__ __FUNCTION__ __FILE__ __LINE__ */
                 SELECT
@@ -46,6 +69,7 @@
 				return false;
 			}
 		}
+
 		function create(array $parameters) {
 			$query_string = "/* __CLASS__ __FUNCTION__ __FILE__ __LINE__ */
 				INSERT INTO
