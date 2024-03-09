@@ -42,7 +42,7 @@
                     <label for="alcohol_content">Alkoholtartalom</label>
 						<input
 							name="alcohol_content"
-							type="number"
+							type="float"
 							value="<?php echo($wine_attributes_do->alcohol_content); ?>"
 							<?php  ?>
 						/>
