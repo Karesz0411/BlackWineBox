@@ -75,20 +75,3 @@
 		
 	}
 ?>
-INSERT INTO
-					16153_theapp.bwb_wine_attributes
-				SET
-                    wine_name           = ?,
-                    aroma               = ?,
-                    flavor              = ?,
-                    appearance 		    = ?,
-                    alcohol_content     = ?,
-                    sweetness           = ?,
-                    making_techniques   = ?,
-                    ageability          = ?,
-                    intensity           = ?,
-                    place_of_production = ?,
-					is_active           = 1,
-					created_at          = NOW(),
-					updated_at          = NOW()
-			";
