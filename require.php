@@ -11,6 +11,7 @@
 	require(RequestResponseHelper::$root . '/views/user_profile_image_upload_view.php');
 	require(RequestResponseHelper::$root . '/views/image_upload_view.php');
 	require(RequestResponseHelper::$root . '/views/item_create_view.php');
+	require(RequestResponseHelper::$root . '/views/box_configurations_create_view.php');
 	require(RequestResponseHelper::$root . '/views/box_configurations_list_view.php');
 	require(RequestResponseHelper::$root . '/views/wine_attributes_create_view.php');
 	require(RequestResponseHelper::$root . '/views/wine_attributes_list_view.php');
