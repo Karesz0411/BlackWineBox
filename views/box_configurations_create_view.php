@@ -7,7 +7,7 @@
 				<?php $this->getWebHeader(); ?>
 				
 				<form action="" method="post" enctype="multipart/form-data">
-					<label for="name">Bor név</label>
+					<label for="name">Doboz név</label>
 						<input
 							name="name"
 							type="text"
@@ -15,10 +15,10 @@
 							<?php  ?>
 						/>
 					<br />
-                    <label for="description">Aroma</label>
+                    <label for="description">Leírás</label>
 						<input
 							name="description"
-							type="text"
+							type="textbox"
 							value="<?php echo($box_configurations_do->description); ?>"
 							<?php  ?>
 						/>
