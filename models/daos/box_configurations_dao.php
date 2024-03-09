@@ -83,16 +83,28 @@
 			";
 
 			try {
-				$handler = ($this->database_connection_bo)->getConnection();
-				$statement = $handler->prepare($query_string);
-				$statement->execute();
-				
-				return $statement->fetchAll();
+				$database_connection = ($this->database_connection_bo)->getConnection();
+
+				$database_connection
+					->prepare($query_string)
+					->execute(
+						(
+							array_map(
+								function($value) {
+									return $value === '' ? NULL : $value;
+								},
+								$parameters
+							)
+						)
+					)
+				;
+
+				return(
+					$database_connection->lastInsertId()
+				);
 			}
 			catch(Exception $exception) {
-				LogHelper::add('Error: ' . $exception->getMessage());
 				RequestResponseHelper::addToResponse('errors', $exception->getMessage());
-
 				return false;
 			}
 		}

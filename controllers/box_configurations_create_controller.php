@@ -27,7 +27,7 @@
 		
 		foreach($do_list as $list_element) {
 			if (
-				$list_element->wine_name == $do->wine_name
+				$list_element->name == $do->name
 			) {
 				UserMessagesHelper::addToMessages(
 					"A megadott adatokkal már létrehoztak egy box konfigurációkat!",

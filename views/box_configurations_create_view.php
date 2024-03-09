@@ -18,7 +18,7 @@
                     <label for="description">Leírás</label>
 						<input
 							name="description"
-							type="textbox"
+							type="textarea"
 							value="<?php echo($box_configurations_do->description); ?>"
 							<?php  ?>
 						/>
