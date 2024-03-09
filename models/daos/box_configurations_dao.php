@@ -49,7 +49,7 @@
 		function create(array $parameters) {
 			$query_string = "/* __CLASS__ __FUNCTION__ __FILE__ __LINE__ */
 				INSERT INTO
-					16153_theapp.bwb_wine_attributes
+					16153_theapp.bwb_box_configurations
 				SET
 					name          		= ?,
 					description         = ?,
