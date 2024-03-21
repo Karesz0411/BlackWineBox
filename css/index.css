@@ -119,14 +119,21 @@ select, select>option
     margin-top: 0;
     margin-bottom: 0;
     padding: 0.3em;
+    border-left: 0.1em solid transparent;
+    border-right: 0.1em solid transparent;
     border-radius: 0.3em;
     background-color: rgba(245, 245, 220, 0.1);
+    transition: border 0s ease-out;
     transition: background-color 0.2s ease-out;
+    list-style-type: '‣ ';
 }
 
 .list_container>ol li:hover, .list_container>ul li:hover
 {
     background-color: rgb(194, 178, 128, 0.5);
+    border-left: 0.1em solid rgba(0, 0, 0, 0.5);
+    border-right: 0.1em solid rgba(0, 0, 0, 0.5);
+    transition: border 0s ease;
     transition: background-color 0.2s ease;
 }
 
