@@ -15,12 +15,12 @@
 		 * ********************************************************/
 		function getUserPasswordHashByUserId(array $parameters) {
 			$query_string = "/* __CLASS__ __FUNCTION__ __FILE__ __LINE__ */
-				SELECT 
-					id AS id,
-					password_hash AS password_hash
-				FROM 
-					bwb_users MAIN 
-				WHERE 
+				SELECT
+					MAIN.id AS id,
+					MAIN.password_hash AS password_hash
+				FROM
+					16153_theapp.bwb_users MAIN 
+				WHERE
 					MAIN.id = ?
 			";
 

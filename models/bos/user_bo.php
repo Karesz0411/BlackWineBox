@@ -155,12 +155,12 @@ class UserBo {
 				UserMessagesHelper::MESSAGE_LEVEL_MESSAGE
 			);
 			$cookie_options = array (
-                'expires' => time() + 60*60*24*30, 
-                'path' => '/', 
+                'expires' => time() + 60*60*24*30,
+                'path' => '/',
                 'domain' => 'blackwinebox.localhost',
                 'secure' => true,
                 'httponly' => true,
-                'samesite' => 'Strict' // None || Lax  || Strict
+                'samesite' => 'Strict' // None || Lax || Strict
             );
 			
 			setcookie('uph', $retrived_do->password_hash, $cookie_options);

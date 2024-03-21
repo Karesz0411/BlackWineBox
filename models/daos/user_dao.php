@@ -238,7 +238,7 @@
 					MAIN.id AS id,
 					MAIN.password_hash AS password_hash
 				FROM 
-					bwb_users MAIN 
+					16153_theapp.bwb_users MAIN 
 				WHERE 
 					MAIN.email = ?
 			";
