@@ -23,8 +23,8 @@
 				$_COOKIE['uph'] = null;
 				header(
 					"Location: " . 	
-					TavernRaidRequestResponseHelper::$url_root . "/" . 
-					TavernRaidRequestResponseHelper::$actor_name . "/" . 
+					RequestResponseHelper::$url_root . "/" . 
+					RequestResponseHelper::$actor_name . "/" . 
 					"login"
 				);
 				exit();

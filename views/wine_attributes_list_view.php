@@ -7,7 +7,7 @@
 
 			foreach ($wine_attributes_do_list as $do) {
 				foreach ($do->getAttributeArray() as $key => $value) {
-					if ( $value ) echo("<p>" . $key . ": " . $value . "</p>");
+					if ( $value ) echo("<div class=\"key_value_container\"><div class=\"key\">" . $key . ":</div><div class=\"value\">" . $value . "</div></div>");
 				}
 				?><hr><?php
 			}
