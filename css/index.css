@@ -147,3 +147,9 @@ form input[type="checkbox"]
 {
     transform: scale(1.5);
 }
+
+form input[type="number"], form input[type="float"]
+{
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+}
