@@ -105,13 +105,13 @@ select, select>option
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.list_container>ol, .list_container>ul
+.list_container ol, .list_container ul
 {
     margin-left: 1em;
     padding: 1em;
 }
 
-.list_container>ol li, .list_container>ul li
+.list_container ol li, .list_container ul li
 {
     width: fit-content;
     color: darkblue;
@@ -128,7 +128,7 @@ select, select>option
     list-style-type: '‣ ';
 }
 
-.list_container>ol li:hover, .list_container>ul li:hover
+.list_container ol li:hover, .list_container ul li:hover
 {
     background-color: rgb(194, 178, 128, 0.5);
     border-left: 0.1em solid rgba(0, 0, 0, 0.5);
@@ -137,8 +137,13 @@ select, select>option
     transition: background-color 0.2s ease;
 }
 
-form>label, form>input[type="text"], form>input[type="textarea"], form>input[type="submit"]
+form label, form input[type="text"], form input[type="textarea"], form input[type="password"], form input[type="submit"]
 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: large;
+}
+
+form input[type="checkbox"]
+{
+    transform: scale(1.5);
 }

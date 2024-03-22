@@ -21,8 +21,9 @@
 
 					<link rel="stylesheet" href="/css/index.css" type="text/css" />
 
-					<script language="JavaScript" type="text/javascript" src="/js/jquery.min.js"></script>
-					<script language="JavaScript" type="text/javascript" src="/js/index.js"></script>
+					<!--<script language="JavaScript" type="text/javascript" src="/js/jquery.min.js"></script>
+					<script language="JavaScript" type="text/javascript" src="/js/index.js"></script>-->
+					<script language="JavaScript" type="text/javascript" src="/script/index.js"></script>
 				</head>
 				
 				<body id="main">

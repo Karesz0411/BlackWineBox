@@ -35,10 +35,12 @@
 						<input name="email" type="text" value="<?php echo($user_do->email); ?>" />
 					<br />
 					<label for="password">Jelszó</label>
-						<input name="password" type="password" value="<?php echo($user_do->password); ?>" />
+						<input name="password" type="password" id="urp" value="<?php echo($user_do->password); ?>" />
+						<input type="checkbox" name="show_password" onclick="showPassword(document.getElementById('urp'));"><label for="show_password">Show password</label>
 					<br />
 					<label for="password_again">Jelszó újra begépelve</label>
-						<input name="password_again" type="password" value="<?php echo($user_do->password_again); ?>" />
+						<input name="password_again" type="password" id="urpa" value="<?php echo($user_do->password_again); ?>" />
+						<input type="checkbox" name="show_password_again" onclick="showPassword(document.getElementById('urpa'));"><label for="show_password_again">Show password again</label>
 					<br />
 						<input name="registration" type="submit" value="Regisztrálás"/>
 				</form>

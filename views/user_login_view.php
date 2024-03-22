@@ -18,8 +18,10 @@
 					<input
 						name="password"
 						type="password"
+						id="ulp"
 						value="<?php echo($user_do->password); ?>"
 					/>
+					<input type="checkbox" name="show_password" onclick="showPassword(document.getElementById('ulp'));"><label for="show_password">Show password</label>
 					<br />
 					<input name="login" type="submit" value="Bejelentkezés"/>
 				</form>
