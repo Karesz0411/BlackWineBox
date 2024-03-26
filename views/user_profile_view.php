@@ -52,9 +52,11 @@
 				<a href="/user/cover_image_upload">User Cover Image Upload</a>
 			</p>
 			
-			<form action="" method="post">
-				<input name="logout" type="submit" value="Kijelentkezés"/>
-			</form>
+			<section class="form_container">
+				<form action="" method="post">
+					<input name="logout" type="submit" value="Kijelentkezés"/>
+				</form>
+			</section>
 			
 			<?php $this->getWebFooter();?>
 			<?php

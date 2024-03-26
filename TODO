@@ -3,7 +3,7 @@ Funkciók a hsup projekthez:
 User:
 	-registration
 	-login
-	-forget password
+	-forgot password
 	-email sender
 	-profile
 	-save payment method

@@ -31,15 +31,17 @@
 			?>
 				<?php $this->getWebHeader(); ?>
 				
-				<form action="" method="post" enctype="multipart/form-data">
-					<label for="image_file">Kép kiválasztása:</label>
-						<input
-							name="image_file"
-							type="file"
-							value="" />
-					<br />
-						<input name="create" type="submit" value="Feltöltés"/>
-				</form>
+				<section class="form_container">
+					<form action="" method="post" enctype="multipart/form-data">
+						<label for="image_file">Kép kiválasztása:</label>
+							<input
+								name="image_file"
+								type="file"
+								value="" />
+						<br />
+							<input name="create" type="submit" value="Feltöltés"/>
+					</form>
+				</section>
 				
 				<?php $this->getWebFooter(); ?>
 			<?php
