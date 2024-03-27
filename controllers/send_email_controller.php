@@ -15,8 +15,6 @@
     // Instantiate PHPMailer
     $mail = new PHPMailer(true);
 
-    print_r($_POST);
-
     try {
         //Server settings
         $mail->isSMTP();
@@ -37,8 +35,6 @@
         $mail->Body    = 'Click <a href="http://example.com/reset_password.php?email=' . urlencode($_POST['email']) . '">here</a> to reset your password.';
 
         $mail->SMTPDebug = 2;
-
-        print_r($mail);
 
         $mail->send();
         echo 'Email sent successfully';

@@ -27,12 +27,13 @@
 							<input
 								name="nick_name"
 								type="text"
+								id="urnn"
 								value="<?php echo($user_do->nick_name); ?>"
 								<?php  ?>
 							/>
 						<br />
 						<label for="email">Email-cím</label>
-							<input name="email" type="text" value="<?php echo($user_do->email); ?>" />
+							<input name="email" type="text" id="urea" value="<?php echo($user_do->email); ?>" />
 						<br />
 						<label for="password">Jelszó</label>
 							<input name="password" type="password" id="urp" value="<?php echo($user_do->password); ?>" />
@@ -43,6 +44,7 @@
 							<input type="checkbox" name="show_password_again" onclick="showPassword(document.getElementById('urpa'));"><label for="show_password_again">Show password again</label>
 						<br />
 							<input name="registration" type="submit" value="Regisztrálás"/>
+							<button type="button" id="random_fill_btn" onclick="fillUserRegistrationInputFieldsWithRandomInputs();">Random kitöltés</button>
 					</form>
 				</section>
 				
