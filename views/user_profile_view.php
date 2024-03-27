@@ -19,7 +19,7 @@
 					)
 				) {
 					echo(
-						'<img src="' . 
+						'<img class="user_profile_image" src="' . 
 						RequestResponseHelper::$url_root . 
 						'/cdn/' . 
 						$user_profile_image_file_name . 
@@ -36,7 +36,7 @@
 					)
 				) {
 					echo(
-						'<img src="' . 
+						'<img class="user_cover_image" src="' . 
 						RequestResponseHelper::$url_root . 
 						'/cdn/' . 
 						$user_cover_image_file_name . 

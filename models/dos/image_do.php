@@ -4,6 +4,5 @@
 	 * ********************************************************/
 	class ImageDo extends AbstractDo {
 		public $actor;
-		public $id;
 	}
 ?>
