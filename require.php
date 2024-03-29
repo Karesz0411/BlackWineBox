@@ -1,6 +1,6 @@
 <?php
 
-	require(RequestResponseHelper::$root . '/controllers/send_email_controller.php');
+	require(RequestResponseHelper::$root . '/controllers/user_send_email_controller.php');
 
 	/*******************************
 	 *************VIEWS*************

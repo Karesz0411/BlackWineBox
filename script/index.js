@@ -12,26 +12,36 @@ function showPassword(input_reference)
 
 function forgotPassword()
 {
-    let  email = prompt("Add meg az email címedet:");
+    let emailTo = prompt("Add meg az email címedet:");
 
-    if ( email != null && email != "" )
+    if ( emailTo != null && emailTo != "" )
     {
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "send_email_controller.php", true);
+        xhr.open("POST", "user_send_email_controller.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function()
         {
-            if ( xhr.readyState == 4 && xhr.status == 200 )
+            if ( xhr.readyState == 4 )
             {
-                alert(xhr.responseText);
+                if ( xhr.status == 200 )
+                {
+                    //alert(xhr.responseText);
+                    document.getElementById('user_forgot_password_info').innerHTML = 'Az email elküldése sikeres!';
+                }
+                else
+                {
+                    document.getElementById('user_forgot_password_info').innerHTML = 'Az email elküldése sikertelen. Kérlek próbáld újra.';
+                }
+
+                document.getElementById('user_forgot_password_info').style.display = 'block';
             }
         };
 
-        xhr.send("email=" + encodeURIComponent(email));
+        xhr.send("email=" + encodeURIComponent(emailTo));
     }
     else
     {
-        alert("Email not provided or canceled.");
+        alert("Nem lett megadva email cím, vagy a folyamat megszakításra került.");
     }
 }
 

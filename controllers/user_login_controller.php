@@ -20,7 +20,6 @@
 		$do->password = empty($_POST['password']) ? $_GET['password'] : $_POST['password'];
 		
 		$bo->doLogin($do);
-
 	}
 	
 	$user_login_view->displayWeb($do);

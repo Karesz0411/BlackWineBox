@@ -189,3 +189,20 @@ form input[type="number"], form input[type="float"]
 {
 
 }
+
+.info_container
+{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 2em;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    background-color: white;
+    box-shadow: 0 0 0.2em 0.1em rgba(0, 140, 186, 0.5);
+    text-align: center;
+    width: fit-content;
+    padding: 1em;
+    border-radius: 1em;
+}
