@@ -38,7 +38,7 @@
 								name="image_file"
 								type="file"
 								value="" />
-						<br />
+						<br /><hr class="form_horizontal_rule">
 							<input name="create" type="submit" value="Feltöltés"/>
 					</form>
 				</section>

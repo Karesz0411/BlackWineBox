@@ -23,7 +23,7 @@
 								value="<?php echo($box_configurations_do->description); ?>"
 								<?php  ?>
 							/>
-						<br />
+						<br /><hr class="form_horizontal_rule">
 							<input name="create" type="submit" value="Létrehozás"/>
 					</form>
 				</section>

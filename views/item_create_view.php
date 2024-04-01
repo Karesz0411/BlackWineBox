@@ -39,7 +39,7 @@
 								value="<?php echo($item_do->image_file_name); ?>"
 								<?php  ?>
 							/>
-						<br />
+						<br /><hr class="form_horizontal_rule">
 							<input name="create" type="submit" value="Létrehozás"/>
 					</form>
 				</section>

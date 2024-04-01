@@ -42,7 +42,7 @@
 						<label for="password_again">Jelszó újra begépelve</label>
 							<input name="password_again" type="password" id="urpa" value="<?php echo($user_do->password_again); ?>" />
 							<input type="checkbox" name="show_password_again" onclick="showPassword(document.getElementById('urpa'));"><label for="show_password_again">Show password again</label>
-						<br />
+						<br /><hr class="form_horizontal_rule">
 							<input name="registration" type="submit" value="Regisztrálás"/>
 							<button type="button" id="random_fill_btn" onclick="fillUserRegistrationInputFieldsWithRandomInputs();">Random kitöltés</button>
 					</form>

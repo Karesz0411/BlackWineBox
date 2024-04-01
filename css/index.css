@@ -241,3 +241,18 @@ form input[type="number"], form input[type="float"]
     padding: 2em;
     border-radius: 3em;
 }
+
+.form_horizontal_rule
+{
+    margin-bottom: 1em;
+}
+
+input[name="logout"]
+{
+    background-color: red;
+}
+
+input[name="logout"]:hover
+{
+    background-color: darkred;
+}

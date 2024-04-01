@@ -87,7 +87,7 @@
 								value="<?php echo($wine_attributes_do->place_of_production); ?>"
 								<?php  ?>
 							/>
-						<br />
+						<br /><hr class="form_horizontal_rule">
 							<input name="create" type="submit" value="Létrehozás"/>
 					</form>
 				</section>

@@ -63,7 +63,7 @@
 								value=""
 								<?php  ?>
 							/>
-						<br />
+						<br /><hr class="form_horizontal_rule">
 							<input name="create" type="submit" value="Feltöltés"/>
 					</form>
 				</section>

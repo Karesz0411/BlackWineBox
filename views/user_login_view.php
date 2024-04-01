@@ -23,7 +23,7 @@
 							value="<?php echo($user_do->password); ?>"
 						/>
 						<input type="checkbox" name="show_password" onclick="showPassword(document.getElementById('ulp'));"><label for="show_password">Show password</label>
-						<br />
+						<br /><hr class="form_horizontal_rule">
 						<input name="login" type="submit" value="Bejelentkezés"/>
 					</form>
 					<a href="#" onclick="userForgotPassword();">Elfelejtett jelszó</a>
