@@ -34,6 +34,7 @@
 		require(RequestResponseHelper::$root . '/models/bos/item_bo.php');
 		require(RequestResponseHelper::$root . '/models/bos/box_configurations_bo.php');
 		require(RequestResponseHelper::$root . '/models/bos/wine_attributes_bo.php');
+		require(RequestResponseHelper::$root . '/models/bos/email_service_bo.php');
 		
 		/*****************************
 		*************DAOS*************
@@ -55,6 +56,8 @@
 		require(RequestResponseHelper::$root . '/models/dos/logo_do.php');
 		require(RequestResponseHelper::$root . '/models/dos/box_configurations_do.php');
 		require(RequestResponseHelper::$root . '/models/dos/wine_attributes_do.php');
+		require(RequestResponseHelper::$root . '/models/dos/email_service_types_do.php');
+		require(RequestResponseHelper::$root . '/models/dos/email_service_do.php');
 
 		
 		/********************************

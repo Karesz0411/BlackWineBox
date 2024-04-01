@@ -206,3 +206,22 @@ form input[type="number"], form input[type="float"]
     padding: 1em;
     border-radius: 1em;
 }
+
+.spinner
+{
+    display: block;
+    height: 2em;
+    width: 2em;
+    border: 0.5em solid blue;
+    border-bottom: 0.5em solid orange;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin
+{
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
