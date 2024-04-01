@@ -29,18 +29,30 @@ a:hover
     transition: color 0.5s ease;
 }
 
-button, input[type="submit"]
+.button, input[type="submit"]
 {
-    border: 0.2em solid black;
-    border-radius: 0.2em;
-    background-color: lightgray;
-    transition: background-color 0.5s ease-out;
+    padding: 0.5em 1.5em;
+    font-size: large;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 1em;
+    box-shadow: 0 0.5em #999;
 }
-
-button:hover, input[type="submit"]:hover
+  
+.button:hover, input[type="submit"]:hover
 {
-    background-color: darkgray;
-    transition: background-color 0.5s ease;
+    background-color: #3e8e41
+}
+  
+.button:active, input[type="submit"]:active
+{
+    background-color: #3e8e41;
+    box-shadow: 0 0.3em #666;
+    transform: translateY(0.2em);
 }
 
 form>input, form>label
@@ -170,7 +182,7 @@ form input[type="number"], form input[type="float"]
     border: 0.3em dashed rgba(255, 255, 255, 0.8);
 }
 
-.user_profile_image
+.user_profile_image, .user_cover_image
 {
     background-color: transparent;
     border: 0.1em solid #ddd;
@@ -179,15 +191,10 @@ form input[type="number"], form input[type="float"]
     transition: box-shadow 0.1s ease-out;
 }
 
-.user_profile_image:hover
+.user_profile_image:hover, .user_cover_image:hover
 {
     box-shadow: 0 0 0.2em 0.1em rgba(0, 140, 186, 0.5);
     transition: box-shadow 0.25s ease;
-}
-
-.user_cover_image
-{
-
 }
 
 .info_container
@@ -224,4 +231,12 @@ form input[type="number"], form input[type="float"]
     {
         transform: rotate(360deg);
     }
+}
+
+.form_container
+{
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 2em;
+    border-radius: 3em;
 }
