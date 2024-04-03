@@ -25,10 +25,6 @@
 	require(RequestResponseHelper::$root . '/models/dos/multiple_image_abstract_do.php');
 	require(RequestResponseHelper::$root . '/models/dos/user_do.php');
 
-	require (RequestResponseHelper::$root . '/PHPMailer/src/PHPMailer.php');
-	require (RequestResponseHelper::$root . '/PHPMailer/src/Exception.php');
-	require (RequestResponseHelper::$root . '/PHPMailer/src/SMTP.php');
-
 	LogHelper::add('--------------------------------------------------------------------------------');
 	LogHelper::add(date('Y-m-d H:i:s', time()));
 	LogHelper::add('Starting up engines...');
@@ -45,6 +41,7 @@
 	RequestResponseHelper::$actor_action = RequestResponseHelper::$request[1];
 
 	require(RequestResponseHelper::$root . '/require.php');
+	require(RequestResponseHelper::$root . '/controllers/email_service_controller.php');
 
 	LogHelper::add('Request: ' . RequestResponseHelper::$path);
 	LogHelper::add(RequestResponseHelper::$root . '/controllers/' . RequestResponseHelper::$actor_name . '_controller.php');

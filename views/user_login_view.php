@@ -27,9 +27,9 @@
 						<input name="login" type="submit" value="Bejelentkezés"/>
 					</form>
 					<a href="#" onclick="userForgotPassword();">Elfelejtett jelszó</a>
-					<div class="info_container" id="user_forgot_password_info" style="display: none;"></div>
-
 				</section>
+
+				<div class="info_container" id="user_forgot_password_info" style="display: none;"></div>
 				
 				<?php $this->getWebFooter(); ?>
 			<?php

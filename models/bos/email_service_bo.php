@@ -1,4 +1,6 @@
 <?php
+    use PHPMailer\PHPMailer\PHPMailer;
+    
     /* ********************************************************
 	 * ********************************************************
 	 * ********************************************************/
@@ -12,13 +14,13 @@
         * ********************************************************
         * ********************************************************/
 
-        function __construct($email_service_type, $emailTo) {
-            $do = new EmailServiceDo();
-            $mail = new PHPMailer(true);
+        function __construct($email_service_type, $email_to) {
+            $this->do = new EmailServiceDo();
+            $this->mail = new PHPMailer(true);
 			
 			if ($email_service_type != null && $email_service_type != '') {
 				$this->do->email_service_type = $email_service_type;
-                $this->initializeMailing($emailTo);
+                $this->initializeMailing($email_to);
             }
 		}
 
@@ -26,8 +28,8 @@
         * ********************************************************
         * ********************************************************/
 
-        public function initializeMailing($emailTo) {
-            $this->do->email_to = $emailTo;
+        public function initializeMailing($email_to) {
+            $this->do->email_to = $email_to;
             if (!filter_var($this->do->email_to, FILTER_VALIDATE_EMAIL)) {
                 UserMessagesHelper::addToMessages(
                     "A megadott Email-cím formailag nem felel meg!",
@@ -50,7 +52,7 @@
 
                     //Recipients
                     $this->mail->setFrom($this->do->sender_email, $this->do->sender_name);
-                    $this->mail->addAddress($emailTo);
+                    $this->mail->addAddress($email_to);
                 }catch (Exception $e) {
                     UserMessagesHelper::addToMessages(
                         "Az email elküldése sikertelen! " . $this->mail->ErrorInfo,

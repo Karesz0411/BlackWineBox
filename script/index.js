@@ -19,8 +19,14 @@ function userForgotPassword()
 
     if ( emailTo != null && emailTo != "" )
     {
+        let mailJSONObject =
+        {
+            "emailto": emailTo,
+            "method": "userforgotpassword"
+        };
+
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "email_service_controller.php", true);
+        xhr.open("POST", "../BlackWineBox/controllers/email_service_controller.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function()
         {
@@ -37,8 +43,8 @@ function userForgotPassword()
                 }
             }
         };
-
-        xhr.send("email=" + encodeURIComponent(emailTo) + "&method=userforgotpassword");
+        
+        xhr.send(mailJSONObject);
     }
     else
     {
