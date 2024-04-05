@@ -34,7 +34,7 @@ function userForgotPassword()
             {
                 if ( xhr.status == 200 )
                 {
-                    //alert(xhr.responseText);
+                    alert(xhr.responseText);
                     document.getElementById('user_forgot_password_info').innerHTML = 'Az email elküldése sikeres!';
                 }
                 else
@@ -44,7 +44,7 @@ function userForgotPassword()
             }
         };
         
-        xhr.send(mailJSONObject);
+        xhr.send(JSON.stringify(mailJSONObject));
     }
     else
     {

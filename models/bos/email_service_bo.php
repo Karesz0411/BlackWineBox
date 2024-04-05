@@ -84,8 +84,8 @@
                 // Content
                 $this->mail->isHTML(true);
                 $this->mail->Subject = 'Password Reset - BlackWineBox';
-                $this->mail->Body    = 'Kattints <a href="http://example.com/reset_password.php?email=' . urlencode($this->do->email_to) . '">ide</a> a jelszavad módosításához.';
-        
+                $this->mail->Body    = 'Kattints <a href="' . RequestResponseHelper::$url_root . '/reset_password.php?email=' . urlencode($this->do->email_to) . '">ide</a> a jelszavad módosításához.';
+                
                 $this->mail->send();
 
                 UserMessagesHelper::addToMessages(

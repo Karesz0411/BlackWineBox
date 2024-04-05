@@ -1,23 +1,6 @@
 <?php
 	
 	class UserRegistrationView extends AbstractView {
-		public function displayMobile() {
-			header('Content-Type: application/json');
-		
-			if (!empty(RequestResponseHelper::$response['errors'])) {
-				foreach (RequestResponseHelper::$response['errors'] as $error_message) {
-					UserMessagesHelper::addToMessages(
-						$error_message,
-						UserMessagesHelper::MESSAGE_LEVEL_ERROR
-					);
-				}
-			}
-			
-			echo json_encode( //TODO: Mit kellene küldeni a mobilosnak? [trisssz]
-				UserMessagesHelper::getAllMessages()
-			);
-		}
-		
 		public function displayWeb(UserDo $user_do) {
 			?>
 				<?php $this->getWebHeader(); ?>

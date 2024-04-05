@@ -118,6 +118,49 @@ class UserBo {
 	/* ********************************************************
 	 * ********************************************************
 	 * ********************************************************/
+
+	public function isPasswordRestorationValid(UserDo $do) {
+		$password_regex = "/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/"; //TODO: frontendes tájékoztassa a usert az új jelszó formai követelményeiről (hossz: minimum 8, legalább egy nagy, kis betű és legalább egy szám)
+		
+		if ($do->password == '') {
+			UserMessagesHelper::addToMessages(
+				"Az \"Új jelszó\" mező nem lehet üres!",
+				UserMessagesHelper::MESSAGE_LEVEL_ERROR
+			);
+			
+			UserMessagesHelper::$invalid_form_fields['password'] = true;
+		}
+		
+		if (!preg_match_all($password_regex,$do->password)) {
+			UserMessagesHelper::addToMessages(
+				"Az \"Új jelszó\" mező nem felel meg a formai követelményeknek!",
+				UserMessagesHelper::MESSAGE_LEVEL_ERROR
+			);
+			
+			UserMessagesHelper::$invalid_form_fields['password'] = true;
+		}
+		
+		if ($do->password_again == '') {
+			UserMessagesHelper::addToMessages(
+				"Az \"Új jelszó újra begépelve\" mező nem lehet üres!",
+				UserMessagesHelper::MESSAGE_LEVEL_ERROR
+			);
+			
+			UserMessagesHelper::$invalid_form_fields['password_again'] = true;
+		}
+		
+		if ($do->password !== $do->password_again) {
+			UserMessagesHelper::addToMessages(
+				"Az általad megadott új jelszó és annak ismétlése nem egyezik!",
+				UserMessagesHelper::MESSAGE_LEVEL_ERROR
+			);
+		}
+	}
+
+	/* ********************************************************
+	 * ********************************************************
+	 * ********************************************************/
+
 	public function create(UserDo $do) {
 		return ($this->dao)->create(
 			[
@@ -187,6 +230,15 @@ class UserBo {
 	/* ********************************************************
 	 * ********************************************************
 	 * ********************************************************/
+
+	public function setNewPassword(UserDo $do) {
+		return $this->dao->setNewPassword($do);
+	}
+
+	/* ********************************************************
+	 * ********************************************************
+	 * ********************************************************/
+
 	public function getUserForgotPassword(array $parameters) {
 		//TODO: Agree on message translations and factor out this string...
 		//TODO: Agree on password retrieval/resetting method and finish this function...
